@@ -5,7 +5,8 @@ Renders Markdown + YAML content in src/ into a static site in dist/.
 
     python build.py            # production build (drafts excluded)
     python build.py --drafts   # include draft pages (lab, proof) for preview only
-    IRM_DRAFTS=1 python build.py   # same as --drafts (for preview deployments)
+    IRM_DRAFTS=1 python build.py   # same as --drafts
+On Cloudflare Pages, drafts are included automatically on any branch except main.
 
 Requires: Jinja2, Markdown, PyYAML (see requirements.txt).
 """
@@ -110,7 +111,9 @@ def main() -> int:
     ap.add_argument("--drafts", action="store_true", help="include draft pages (never for production)")
     ap.add_argument("--out", default=str(DIST))
     args = ap.parse_args()
-    include_drafts = args.drafts or os.environ.get("IRM_DRAFTS") == "1"
+    # Cloudflare Pages sets CF_PAGES_BRANCH during builds: preview branches get the drafts, main never does.
+    cf_branch = os.environ.get("CF_PAGES_BRANCH", "")
+    include_drafts = args.drafts or os.environ.get("IRM_DRAFTS") == "1" or (cf_branch not in ("", "main"))
     out = Path(args.out)
 
     site = load_yaml(DATA / "site.yaml")

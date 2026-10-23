@@ -62,7 +62,7 @@ Library articles go in `src/content/en/library/` and appear on `/library/` autom
 
 ## Draft pages
 
-`laboratory.md` and `proof.md` are marked `draft: true`. They contain placeholders (lab equipment, photos, case studies, figures) to fill in. Production builds skip them. To review them on a Cloudflare preview deployment, set `IRM_DRAFTS=1` for the **Preview** environment only. When a page is ready, fill the placeholders, remove `draft: true`, and add it to `nav.yaml` if it should appear in the menu.
+`laboratory.md` and `proof.md` are marked `draft: true`. They contain placeholders (lab equipment, photos, case studies, figures) to fill in. Builds of `main` skip them; Cloudflare preview builds of any other branch include them automatically (marked noindex, with a draft banner). When a page is ready, fill the placeholders, remove `draft: true`, and add it to `nav.yaml` if it should appear in the menu.
 
 ## Deploying on Cloudflare Pages
 
@@ -71,9 +71,8 @@ The live site currently serves the old single `index.html` from the repository r
 1. Cloudflare dashboard → Workers & Pages → the irmllc.co project → Settings → Build.
 2. Build command: `pip install -r requirements.txt && python build.py`
 3. Build output directory: `dist`
-4. Environment variable (Production and Preview): `PYTHON_VERSION` = `3.12`
-5. Preview environment only, if you want to see the drafts: `IRM_DRAFTS` = `1`
-6. The `functions/` folder at the repository root is picked up automatically.
+4. No build variables are needed. The build runs on Cloudflare's default Python (3.13 on the current build image; tested).
+5. The `functions/` folder at the repository root is picked up automatically.
 
 After the first deploy, check `https://irmllc.co/robots.txt`, `/sitemap.xml` and a deep page such as `/peek-recycling/`.
 
@@ -83,7 +82,7 @@ The form posts to `/api/inquiry`, which creates a Lead and uploads any attached 
 
 1. Go to the Zoho API Console for your data center (https://api-console.zoho.com, or `.eu`, `.in` … — use the one that matches the address you sign in to CRM with) and create a **Self Client**.
 2. Generate a code with the scopes `ZohoCRM.modules.leads.CREATE,ZohoCRM.modules.attachments.CREATE`, then exchange it for a refresh token (Zoho's "Self Client" instructions show the one request needed).
-3. In Pages → Settings → Variables and Secrets, add as **encrypted secrets**:
+3. In the Pages project → Settings → **Variables and Secrets** (a separate section from Build; pick the **Production** environment), add as type **Secret**:
    - `ZOHO_CLIENT_ID`
    - `ZOHO_CLIENT_SECRET`
    - `ZOHO_REFRESH_TOKEN`
