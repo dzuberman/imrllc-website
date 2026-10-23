@@ -1,0 +1,23 @@
+# Cloudflare Pages redirects, written to dist/_redirects by build.py.
+# Short and alternate URLs people type or that ads/brochures can use.
+# Anchors from the old single-page site (/#faq, /#fibres …) are mapped in site.js,
+# because the part after # never reaches the server.
+redirects:
+  - {from: /sell, to: /sell-scrap/}
+  - {from: /quote, to: /contact/}
+  - {from: /peek, to: /peek-recycling/}
+  - {from: /pekk-recycling, to: /peek-recycling/}
+  - {from: /psu-recycling, to: /polysulfone-recycling/}
+  - {from: /pesu-recycling, to: /polysulfone-recycling/}
+  - {from: /ppsu-recycling, to: /polysulfone-recycling/}
+  - {from: /ultem-recycling, to: /pei-ultem-recycling/}
+  - {from: /pei-recycling, to: /pei-ultem-recycling/}
+  - {from: /torlon-recycling, to: /pai-torlon-recycling/}
+  - {from: /pai-recycling, to: /pai-torlon-recycling/}
+  - {from: /vespel-recycling, to: /polyimide-pbi-recycling/}
+  - {from: /ptfe-recycling, to: /fluoropolymer-recycling/}
+  - {from: /pvdf-recycling, to: /fluoropolymer-recycling/}
+  - {from: /carbon-fibre, to: /carbon-fiber/}
+  - {from: /carbon-fiber-recycling, to: /carbon-fiber/}
+  - {from: /privacy-policy, to: /privacy/}
+  - {from: /locations, to: /global-network/}

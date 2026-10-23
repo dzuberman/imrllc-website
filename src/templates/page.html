@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% import "_partials.html" as ui %}
+{% block main %}
+{{ ui.page_hero(page, t, lang) }}
+<section class="section">
+  <div class="wrap">
+    {% if page.meta.get('facts') %}
+    <div class="split">
+      <div class="prose">{{ page.body_html }}</div>
+      <aside aria-label="{{ page.meta.get('facts_title', 'At a glance') }}">
+        <h2 class="h3">{{ page.meta.get('facts_title', 'At a glance') }}</h2>
+        <ul class="facts">
+          {% for f in page.meta.facts %}<li><b>{{ f[0] }}</b><span>{{ f[1]|md }}</span></li>{% endfor %}
+        </ul>
+        {% if page.meta.get('aside_cta', true) %}
+        <p class="aside-cta"><a class="btn btn--primary" href="{{ url_for('/contact/') }}">{{ page.meta.get('aside_cta_label', t.inquire) }}</a></p>
+        {% endif %}
+      </aside>
+    </div>
+    {% else %}
+    <div class="prose{{ ' prose--wide' if page.meta.get('wide') }}">{{ page.body_html }}</div>
+    {% endif %}
+  </div>
+</section>
+{% if page.meta.get('related') %}
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head"><h2>{{ page.meta.get('related_title', t.related) }}</h2></div>
+    {{ ui.card_links(page.meta.related, lang, t.read_more) }}
+  </div>
+</section>
+{% endif %}
+{% if page.meta.get('cta', true) %}{{ ui.cta(t, lang) }}{% endif %}
+{% endblock %}

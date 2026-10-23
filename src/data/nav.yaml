@@ -1,0 +1,47 @@
+# Primary navigation (English). Keys are page keys (paths without language prefix).
+primary:
+  - label: Sell Scrap
+    key: /sell-scrap/
+  - label: Recycling
+    id: recycling
+    items:
+      - {label: PEEK & PAEK, note: "PEEK, PEKK, PEK, LMPAEK", key: /peek-recycling/}
+      - {label: PEI · Ultem, note: Polyetherimide scrap and powder, key: /pei-ultem-recycling/}
+      - {label: PAI · Torlon, note: Uncured and post-cured PAI, key: /pai-torlon-recycling/}
+      - {label: Polyimide & PBI, note: "Vespel, TPI, Celazole", key: /polyimide-pbi-recycling/}
+      - {label: PSU · PESU · PPSU, note: Sulfone polymers, key: /polysulfone-recycling/}
+      - {label: PPS, note: Polyphenylene sulfide, key: /pps-recycling/}
+      - {label: Fluoropolymers, note: "PTFE, PFA, FEP, ETFE, ECTFE, PVDF", key: /fluoropolymer-recycling/}
+      - {label: "LCP, PPA & specialty", note: "LCP, PPA, PK, specialty PA and polyesters", key: /specialty-polymer-recycling/}
+      - {label: Engineering plastics trading, note: "POM, PC, blends, styrenics", key: /trading/}
+  - label: Fibers
+    id: fibers
+    items:
+      - {label: Carbon fiber, note: Oversizing and precision or random chopping, key: /carbon-fiber/}
+      - {label: Aramid & high-performance fibers, note: "Para-aramid, PBO, PBI, preox", key: /aramid-fiber-recycling/}
+  - label: Products
+    id: products
+    items:
+      - {label: Recycled materials, note: "Regrind, repelletized granule, powder", key: /products/}
+      - {label: Custom compounding, note: "CF, GF, tribological, ESD", key: /compounding/}
+      - {label: Semi-finished products, note: "Rods, fire blankets, recycled yarns", key: /semi-finished-products/}
+  - label: Company
+    id: company
+    items:
+      - {label: About IRM, note: The IRM and GCMG group, key: /about/}
+      - {label: Capabilities, note: "Melt, powder and fiber routes", key: /capabilities/}
+      - {label: Global network, note: Sites and offices on four continents, key: /global-network/}
+      - {label: "Sumter, SC plant", note: "Cleaning, micronization, compounding", key: /locations/sumter-sc/}
+      - {label: Producer by-products, note: Off-take for polymer producers, key: /producer-by-products/}
+  - label: Library
+    key: /library/
+  - label: FAQ
+    key: /faq/
+
+footer:
+  - title: Recycling
+    keys: [/sell-scrap/, /peek-recycling/, /pei-ultem-recycling/, /pai-torlon-recycling/, /polyimide-pbi-recycling/, /polysulfone-recycling/, /pps-recycling/, /fluoropolymer-recycling/, /specialty-polymer-recycling/]
+  - title: Fibers & products
+    keys: [/carbon-fiber/, /aramid-fiber-recycling/, /products/, /compounding/, /semi-finished-products/, /trading/, /producer-by-products/]
+  - title: Company & resources
+    keys: [/about/, /capabilities/, /global-network/, /locations/sumter-sc/, /materials/, /library/, /faq/, /contact/, /privacy/]

@@ -1,0 +1,131 @@
+# Global network — rendered on /global-network/.
+regions:
+  - id: usa
+    name: United States · IRM LLC
+    tagline: North American operating arm — paired fiber processing and compounding
+    sites:
+      - type: Technical fiber hub
+        name: South Jordan, Utah
+        loc: "881 W. Baxter Dr., Suite 100, South Jordan, UT 84095 · Headquarters"
+        text: >-
+          Technology and innovation center. Carbon fiber oversizing — a secondary binder applied to loose
+          roving and off-grade bobbins to keep bundles intact — and precision chopping from 0.1 to 12 mm.
+          Powder production by the process each material needs: ambient mechanical milling for glassy
+          thermosets (Vespel®, post-cured PAI, PBI, phenolic, P84), ambient jet milling after molecular-weight
+          reduction for PTFE, and cryogenic grinding for drawn UHMWPE fiber and aramid. Para-aramid and UHMWPE
+          pulp from ballistic PPE waste. Small-scale reactive extrusion for formulation development before
+          scale-up at Sumter, SC.
+        tags: [CF Oversizing, Precision Chopping, Ambient Milling, Cryo Grinding, Aramid Pulp, R&D Compounding]
+      - type: Industrial plant
+        name: Sumter, South Carolina
+        url: /locations/sumter-sc/
+        loc: "2075 Lynette Drive, Sumter, SC 29154"
+        text: >-
+          Large-scale production facility. High-volume collection of ballistic and technical fiber waste and
+          deconstruction of end-of-life body armor and ballistic panels. Solvent and other cleaning processes
+          that recover high-performance aromatic polymers and fibers, from PEEK to para-aramid. Micronization
+          of PTFE and post-cured PAI. Industrial-scale reactive extrusion of PEEK, PPS, PA, LCP and
+          fluoropolymer compounds, using fibers, powders and additives from South Jordan, UT — one chain from
+          waste to compound pellet.
+        tags: [Industrial Reactive Extrusion, Ballistic Waste, Solvent Cleaning, PTFE & PAI Micronization, Vespel® Powder, Thermoset Recycling]
+      - type: Office
+        name: North Charleston, South Carolina
+        loc: "6650 Rivers Ave, Ste 105, PMB #245157, North Charleston, SC 29406"
+        text: South Carolina office and mailing address of IRM LLC.
+        tags: [Office]
+
+  - id: croatia
+    name: Croatia · GCMG
+    tagline: European operating base — EU regulatory and market access
+    sites:
+      - type: High-performance fiber recycling
+        name: Croatia — fiber plant
+        loc: Republic of Croatia · EU
+        text: >-
+          UHPP-focused fiber cleaning, sizing and chopping operation. Carbon fiber recovery from European
+          composite waste, para-aramid processing and a fiber characterization lab. Mirrors the South Jordan,
+          UT model for EU territory.
+        tags: [EU Aerospace Scrap, CF Recovery, Aramid Processing]
+      - type: UHPP compounding
+        name: Croatia — compound plant
+        loc: Republic of Croatia · EU
+        text: >-
+          Incoming qualification, mechanical size reduction to regrind, and repelletizing and compounding.
+          Custom compound development for EU OEM customers, with recycled-content documentation. Reactive
+          extrusion capability. Positioned for EU sustainability requirements in aerospace supply chains,
+          medical devices and EV programs.
+        tags: [EU Market Access, Recycled-Content Documentation, Custom Compounds]
+
+  - id: india
+    name: India · GCMG
+    tagline: "South Asia operating base — collection, cleaning, micronization, carbon fiber chopping and extrusion in Gujarat"
+    sites:
+      - type: Collection, cleaning & micronization
+        name: Rajkot, Gujarat
+        loc: Rajkot, Gujarat · India
+        text: >-
+          Collection, cleaning and opening of high-performance fibers — including para-aramid recovered from
+          coated and resin-bound waste — and cleaning, grinding and micronization of high-performance polymer
+          scrap. Output feeds the Kandla extrusion site and other group operations.
+        tags: [Collection, Fiber Cleaning, Fiber Opening, Polymer Cleaning, Grinding, Micronization]
+      - type: Extrusion & compounding
+        name: Kandla SEZ, Gujarat
+        loc: Kandla Special Economic Zone · Gujarat · India
+        text: >-
+          The group's main extrusion site in India. Twin-screw extrusion and compounding of high-performance
+          polymers, including carbon-fiber-reinforced PEEK, plus consolidation and qualification of
+          large-generator scrap. Special Economic Zone status supports export logistics to customers in the EU,
+          the US and Asia.
+        tags: [Twin-Screw Extrusion, CF-PEEK Compounds, Scrap Consolidation, SEZ Export]
+
+  - id: malaysia
+    name: Malaysia · Joint venture
+    tagline: Remelting and cleaning partner in Southeast Asia
+    sites:
+      - type: Joint venture
+        name: Malaysia
+        loc: Malaysia
+        text: >-
+          Thermomechanical remelting and chemical cleaning of high-performance plastics such as PEEK and PAI.
+        tags: [Remelting, Chemical Cleaning, PEEK, PAI]
+
+  - id: commercial
+    name: Commercial network
+    tagline: Purchasing, sales and collection across Asia and South America
+    sites:
+      - type: Technical waste collection hub
+        name: Brazil
+        loc: Brazil
+        text: >-
+          South American collection facility for aerospace supply chain, oil and gas, automotive and São Paulo
+          medical-cluster scrap streams. Material is consolidated for shipping to Croatia or India for advanced
+          processing.
+      - type: Purchasing & sales
+        name: China
+        loc: Foshan, Guangdong
+        text: >-
+          Commercial office serving mainland China: scrap and by-product purchasing, and compound sales to
+          manufacturers in the electronics, automotive and medical sectors.
+      - type: Purchasing & sales
+        name: Japan
+        loc: "Tokyo · [yoshi.k@gcmg.eu](mailto:yoshi.k@gcmg.eu)"
+        text: >-
+          High-quality, traceable scrap streams from Japanese manufacturers, and active engagement with
+          Japanese semiconductor, medical and aerospace supply chains.
+      - type: Purchasing & sales
+        name: South Korea
+        loc: South Korea
+        text: >-
+          Korean electronics, semiconductor and EV supply chains. Purchasing focused on premium-grade
+          high-performance polymer scrap with full documentation, and compound sales to Korean manufacturers.
+
+  - id: group
+    name: Group holding · GCMG S.L.
+    tagline: Holding company and international operating arm
+    sites:
+      - type: Holding
+        name: Andorra
+        loc: "C/ Sant Salvador 10A, Pis 0 4-8, AD500 Andorra la Vella"
+        text: >-
+          Global Consulting & Manufacturing Group S.L. (GCMG) is the group holding and international operating
+          arm; IRM LLC is its US company. Group website: [gcmg.eu](https://gcmg.eu/).

@@ -1,0 +1,63 @@
+{%- macro addr(a) -%}
+<address>{{ a.name }}<br>{{ a.street }}<br>{{ a.city }}{% if a.region %}, {{ a.region }}{% endif %} {{ a.postal }}<br>{{ a.country_name }}</address>
+{%- endmacro -%}
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>{{ t.footer_contact }}</h2>
+        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a>{% if site.phone %}<br><a href="{{ site.phone_href }}">{{ site.phone }}</a>{% endif %}</p>
+        <p class="small muted">{{ site.addresses.hq.label if lang == 'en' else '' }}</p>
+        {{ addr(site.addresses.hq) }}
+        {% if lang == 'en' %}<p class="small muted">{{ site.addresses.sumter.label }}</p>{% endif %}
+        {{ addr(site.addresses.sumter) }}
+      </div>
+      {% if lang == 'en' %}
+      {% for col in nav.footer %}
+      <div>
+        <h2>{{ col.title }}</h2>
+        <ul>
+          {% for k in col['keys'] %}{% set p = by_key.get(k, {}).get('en') %}{% if p %}<li><a href="{{ p.url }}">{{ p.meta.get('short') or p.meta.get('title') }}</a></li>{% endif %}{% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+      {% else %}
+      <div>
+        <h2>IRM</h2>
+        <ul>
+          <li><a href="{{ url_for('/', lang) }}">{{ t.home }}</a></li>
+          <li><a href="{{ url_for('/sell-scrap/', lang) }}">{{ t.sell_scrap }}</a></li>
+          <li><a href="/" hreflang="en" lang="en">{{ t.english_site }}</a></li>
+          <li><a href="/privacy/" hreflang="en" lang="en">{{ t.privacy }} (English)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>English</h2>
+        <ul lang="en">
+          <li><a href="/peek-recycling/">PEEK &amp; PAEK recycling</a></li>
+          <li><a href="/polysulfone-recycling/">PSU · PESU · PPSU</a></li>
+          <li><a href="/fluoropolymer-recycling/">Fluoropolymers</a></li>
+          <li><a href="/carbon-fiber/">Carbon fiber</a></li>
+          <li><a href="/global-network/">Global network</a></li>
+          <li><a href="/materials/">Materials data</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>{{ t.footer_languages }}</h2>
+        <ul>
+          {% for code in langs %}<li><a href="{{ url_for('/', code) }}" hreflang="{{ lang_meta[code].hreflang }}" lang="{{ lang_meta[code].hreflang }}">{{ lang_meta[code].name }}</a></li>{% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+    {% if lang == 'en' %}
+    <div class="footer-langs" role="group" aria-label="{{ t.footer_languages }}">
+      {% for code in langs %}<a href="{{ url_for('/', code) }}" hreflang="{{ lang_meta[code].hreflang }}" lang="{{ lang_meta[code].hreflang }}">{{ lang_meta[code].name }}</a>{% endfor %}
+    </div>
+    {% endif %}
+    <div class="footer-bottom">
+      <p>© {{ site.year }} {{ t.footer_rights }} {{ t.footer_group }}</p>
+      <p>{{ t.footer_tm }}</p>
+    </div>
+  </div>
+</footer>

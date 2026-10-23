@@ -1,0 +1,67 @@
+skip: 跳到正文
+menu: 菜单
+close_menu: 关闭菜单
+language: 语言
+home: 首页
+sell_scrap: 出售废料
+contact: 联系我们
+inquire: 获取报价
+english_site: 英文网站
+brand_sub: International Resources Manufacturing
+nav_label: 主导航
+breadcrumbs: 面包屑导航
+on_this_page: 本页内容
+related: 相关页面
+updated: 更新于
+read_more: 了解更多
+footer_contact: 联系方式
+footer_languages: 语言
+footer_group: GCMG 集团成员 — Global Consulting & Manufacturing Group S.L.，安道尔。
+footer_tm: 所有品牌名称和商标均归其各自所有者所有。IRM LLC 和 GCMG S.L. 与本网站提及的任何供应商均无关联，未获其认可，也不是其授权经销商；商品名称仅用于识别。
+footer_rights: "International Resources Manufacturing LLC。保留所有权利。"
+privacy: 隐私
+email: 电子邮件
+phone: 电话
+response: 回复时间
+cta_title: 有高性能聚合物废料，或需要再生材料？
+cta_text: 请发送照片和简要说明。我们会在 24 小时内回复。
+cta_primary: 获取报价
+cta_secondary: 发送邮件
+
+form:
+  title: 获取报价
+  intro: 请告诉我们您有什么或需要什么。照片有助于我们更快地为废料报价。
+  name: 姓名
+  company: 公司
+  email: 电子邮件
+  phone: 电话
+  country: 国家/地区
+  type: 咨询类型
+  type_options:
+    - {value: sell-scrap, label: 出售废料}
+    - {value: buy-material, label: 采购再生材料}
+    - {value: compounding, label: 定制改性或来料加工}
+    - {value: semi-finished, label: 半成品}
+    - {value: by-products, label: 副产品回收}
+    - {value: other, label: 其他}
+  material: 聚合物或纤维
+  material_hint: 例如：PEEK 450G 切屑、Torlon 4301 棒材余料、PESU 膜材边角料
+  quantity: 大致数量
+  quantity_hint: 例如：现有 300 kg，每月约 100 kg
+  message: 详细说明
+  message_hint: 形态（切屑、棒材余料、清机料、零件、粉末、纤维）、状态、所在地、时间
+  files: 照片或文件（可选）
+  files_hint: 最多 5 个文件，总计 10 MB。JPG、PNG、PDF。
+  consent: "我同意 IRM 按照<a href=\"/privacy/\" hreflang=\"en\">隐私声明（英文）</a>所述，使用上述信息回复我的咨询。"
+  required: 必填
+  submit: 提交咨询
+  sending: 正在发送…
+  ok: 谢谢——我们已收到您的咨询，将在 24 小时内回复。
+  err: 表单发送失败。请发送邮件至 info@irmllc.co。
+  err_files: 文件过大。请将附件总量控制在 10 MB 以内，或发送至 info@irmllc.co。
+  err_required: 请填写必填项。
+
+thanks_title: 谢谢
+thanks_text: 我们已收到您的咨询，将在 24 小时内回复。
+notfound_title: 页面未找到
+notfound_text: 您要查找的页面不存在或已被移动。

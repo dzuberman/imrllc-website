@@ -1,0 +1,67 @@
+skip: Aller au contenu
+menu: Menu
+close_menu: Fermer le menu
+language: Langue
+home: Accueil
+sell_scrap: Vendre vos chutes
+contact: Contact
+inquire: Demander un devis
+english_site: Site en anglais
+brand_sub: International Resources Manufacturing
+nav_label: Navigation principale
+breadcrumbs: Fil d’Ariane
+on_this_page: Sur cette page
+related: Pages associées
+updated: Mis à jour
+read_more: En savoir plus
+footer_contact: Contact
+footer_languages: Langues
+footer_group: Membre du groupe GCMG — Global Consulting & Manufacturing Group S.L., Andorre.
+footer_tm: Toutes les marques et dénominations commerciales appartiennent à leurs propriétaires respectifs. IRM LLC et GCMG S.L. ne sont ni affiliées aux fournisseurs cités sur ce site, ni soutenues par eux, ni leurs distributeurs agréés ; les noms commerciaux ne servent qu’à l’identification.
+footer_rights: "International Resources Manufacturing LLC. Tous droits réservés."
+privacy: Confidentialité
+email: E-mail
+phone: Téléphone
+response: Délai de réponse
+cta_title: Vous avez des chutes de polymères haute performance ou besoin de matière recyclée ?
+cta_text: Envoyez des photos et une courte description. Nous répondons sous 24 heures.
+cta_primary: Demander un devis
+cta_secondary: Nous écrire
+
+form:
+  title: Demander un devis
+  intro: Dites-nous ce que vous avez ou ce dont vous avez besoin. Des photos nous aident à chiffrer plus vite.
+  name: Nom complet
+  company: Entreprise
+  email: E-mail
+  phone: Téléphone
+  country: Pays
+  type: Objet
+  type_options:
+    - {value: sell-scrap, label: Vendre des chutes}
+    - {value: buy-material, label: Acheter de la matière recyclée}
+    - {value: compounding, label: Compoundage sur mesure ou à façon}
+    - {value: semi-finished, label: Demi-produits}
+    - {value: by-products, label: Reprise de sous-produits}
+    - {value: other, label: Autre}
+  material: Polymère ou fibre
+  material_hint: Par exemple copeaux de PEEK 450G, chutes de barres Torlon 4301, découpes de membranes PESU
+  quantity: Quantité approximative
+  quantity_hint: Par exemple 300 kg maintenant, environ 100 kg par mois
+  message: Détails
+  message_hint: Forme (copeaux, chutes de barres, purges, pièces, poudre, fibre), état, localisation, délais
+  files: Photos ou documents (facultatif)
+  files_hint: Jusqu’à 5 fichiers, 10 Mo au total. JPG, PNG, PDF.
+  consent: "J’accepte qu’IRM utilise ces informations pour répondre à ma demande, comme décrit dans la <a href=\"/privacy/\" hreflang=\"en\">politique de confidentialité (en anglais)</a>."
+  required: obligatoire
+  submit: Envoyer la demande
+  sending: Envoi en cours…
+  ok: Merci — votre demande a bien été reçue. Nous répondons sous 24 heures.
+  err: Le formulaire n’a pas pu être envoyé. Écrivez-nous à info@irmllc.co.
+  err_files: Les fichiers sont trop volumineux. Restez sous 10 Mo au total ou envoyez-les à info@irmllc.co.
+  err_required: Veuillez remplir les champs obligatoires.
+
+thanks_title: Merci
+thanks_text: Votre demande a bien été reçue. Nous répondons sous 24 heures.
+notfound_title: Page introuvable
+notfound_text: La page recherchée n’existe pas ou a été déplacée.

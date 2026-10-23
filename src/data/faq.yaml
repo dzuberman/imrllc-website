@@ -1,0 +1,149 @@
+# FAQ — rendered on /faq/ (and as FAQPage structured data generated from the same text).
+groups:
+  - id: selling
+    title: Selling scrap to IRM
+    items:
+      - id: what-do-you-buy
+        q: What scrap do you buy?
+        a: |
+          We buy post-industrial scrap and production by-products of high-performance polymers and technical fibers: PEEK and other PAEKs (PEKK, PEK, LMPAEK), PEI, PAI, thermoset polyimide, PBI, PSU, PESU, PPSU, PPS, LCP, PPA, fluoropolymers (PTFE, PFA, FEP, ETFE, ECTFE, PVDF, PCTFE), specialty polyamides and polyesters, carbon fiber, para-aramid, PBO, PBI fiber and oxidized PAN. We also trade engineering plastics such as POM, PC and PC blends.
+
+          See [what we buy](/sell-scrap/) for accepted forms and typical minimum lots.
+      - id: forms
+        q: In what forms do you accept scrap?
+        a: |
+          Machining swarf and chips, rod and plate ends, tube offcuts, injection-molding runners, sprues and purge, rejected parts, regrind, off-spec pellets and powder, film and sheet trim, and fiber waste (roving, bobbins, selvedge, chopped fiber, nonwoven and fabric offcuts). Send photos — form and condition decide the route and the price.
+      - id: small-quantities
+        q: Do you accept small quantities?
+        a: |
+          Yes. The minimum economical lot depends on the polymer. PEEK, PEKK and other high-value PAEKs: from 50–100 kg per lot. Polyimides and fluoropolymers: typically 100–200 kg. HT polyamides and polysulfones: usually 500 kg or more, depending on location.
+
+          If you generate a small amount regularly, we can set up a collection arrangement that builds up a lot over time.
+      - id: pricing
+        q: How do you price scrap?
+        a: |
+          Price depends on the polymer and grade, whether it is filled (carbon fiber, glass, PTFE, graphite), how clean and well-segregated it is, its form, the quantity and how regularly it is available, and the current market. Machining swarf that is clean and single-grade is worth more than mixed or oil-wet material. Photos and the original grade name, if you have it, let us quote quickly.
+      - id: filled-grades
+        q: Do you buy filled and reinforced grades?
+        a: |
+          Yes. Carbon-fiber, glass-fiber and lubricated grades (PTFE, graphite, MoS₂) of PEEK, PAI, PEI, PPS and other polymers are recycled through the melt route as compounds, or traded to processors that use them. Keep each filled grade separate from unfilled material of the same polymer.
+      - id: contaminated
+        q: Can you take oily or contaminated scrap?
+        a: |
+          Often, yes. Coolant- and oil-wet machining swarf can be cleaned before reprocessing; our Sumter, SC plant and our India sites run cleaning lines. Metal fragments, mixed polymers and unknown coatings reduce value and may rule a lot out, so tell us what the material has been in contact with.
+      - id: segregation
+        q: How should we store and segregate scrap?
+        a: |
+          Keep each polymer and each grade in its own labeled container, separate filled from unfilled grades, keep material dry and covered, and keep metal, paper and other plastics out. Record the original grade name on the label. [The guide to identifying PSU, PESU and PPSU](/library/identifying-psu-pesu-ppsu-scrap/) shows why segregation matters for look-alike polymers.
+      - id: logistics
+        q: Do you arrange pickup and freight?
+        a: |
+          Yes. We arrange freight from your dock on agreed terms, or you can deliver. For recurring streams we can schedule regular collections.
+      - id: confidential
+        q: Can you handle confidential or controlled parts?
+        a: |
+          Yes. We sign NDAs on request and agree in writing how identifiable parts are handled — for example, size reduction before the material leaves our control. Tell us about any export-control or customer requirements before shipping so we can confirm the handling.
+      - id: agreements
+        q: Do you sign supply agreements for recurring scrap?
+        a: |
+          Yes. For regular streams we offer framework agreements with agreed specifications, pricing basis, pickup schedule and documentation.
+
+  - id: buying
+    title: Buying materials and services
+    items:
+      - id: what-do-you-supply
+        q: What materials do you supply?
+        a: |
+          Recycled regrind, repelletized granules (neat and compounded), micronized powders (including PTFE and post-cured PAI), custom compounds (carbon-fiber, glass-fiber, tribological and ESD grades), chopped carbon fiber, recycled para-aramid fiber and pulp, and — from our newer semi-finished products division — polymer rods, nonwoven fire blankets and recycled yarns. See [recycled materials](/products/) and [semi-finished products](/semi-finished-products/).
+      - id: documentation
+        q: What documentation comes with a shipment?
+        a: |
+          Every shipment comes with a Certificate of Analysis: DSC results (Tg, Tm, crystallinity), melt flow, density, ash or filler content, and traceability to the source stream and processing run. Higher-tier materials can be supplied with a full Material Analysis Record. We also provide Safety Data Sheets, customs and waste classification codes for cross-border shipments, and chain-of-custody records, and we can provide documentation to support customers' aerospace, defense and sustainability reporting requirements.
+      - id: samples
+        q: Can I get a sample before ordering?
+        a: |
+          Yes. Tell us the material, the application and the volume you expect; we send a development sample with its test data so you can qualify it in your own process.
+      - id: toll
+        q: Do you offer toll processing?
+        a: |
+          Yes, case by case: compounding, repelletizing, cleaning, micronization and carbon fiber chopping. Our priority is buying material for our own production, so tell us the material, volume and specification and we will confirm capacity.
+      - id: quantities
+        q: What quantities can you supply?
+        a: |
+          From development lots for qualification to scheduled production deliveries under framework agreements. Availability of recycled grades depends on incoming scrap, so tell us your annual volume early.
+      - id: recycled-performance
+        q: Can recycled high-performance polymers be used in demanding applications?
+        a: |
+          Often, after qualification. PEEK and other PAEKs usually keep most of their properties through one or two careful reprocessing cycles; melt flow shows molecular-weight change and DSC shows crystallinity. Each lot is tested, and you qualify the material against your own requirements. Regulated uses such as medical implants or flight-critical parts need materials certified for that use.
+
+  - id: technical
+    title: Technical questions
+    items:
+      - id: regrind-vs-granule
+        q: What is the difference between regrind and repelletized granule?
+        a: |
+          **Regrind** is the product of mechanical size reduction — parts, runners, offcuts or production waste passed through a granulator or shredder. It is irregular in shape and size and is a process intermediate, sized to feed an extruder.
+
+          **Repelletized granule** is the product of melt extrusion and strand cutting: regrind is melted, homogenized, extruded through a die, water-bath cooled and cut into uniform pellets. It is the finished, tested product that goes back into injection molding or extrusion.
+
+          At IRM, regrind goes into the extruder and granule comes out. [Read the full guide](/library/regrind-vs-repelletized-granule/).
+      - id: melt-vs-powder
+        q: What is the melt route and what is the powder route?
+        a: |
+          **Melt route:** the polymer can be melted. Scrap is size-reduced to regrind, dried, tested by DSC, TGA and melt flow, then extruded and pelletized — neat or compounded.
+
+          **Powder route:** the material cannot flow — thermoset polyimide (Vespel®, Kapton®, P84), fully post-cured PAI, PTFE, PBI and elastomers. It is milled to fine powder, choosing the process by the material's state at room temperature, and used as a functional filler. [Read the guide to recovery routes](/library/melt-powder-fiber-recovery-routes/).
+      - id: cryogenic
+        q: When is cryogenic grinding necessary?
+        a: |
+          For materials that are too tough or too rubbery to fracture at room temperature: **elastomers** (FKM, FFKM, NBR, EPDM, silicone), which smear and gum a mill at room temperature, and **drawn, highly oriented fibers** such as UHMWPE and para-aramid, whose toughness resists ambient milling. Cooling with liquid nitrogen makes them brittle enough to fracture cleanly; these fibers can also be pulped or precision-cut instead.
+
+          Everything else is better ground at ambient temperature. Glassy thermosets (Vespel®, post-cured PAI, PBI, phenolic) are already brittle, and PTFE is jet-milled to micropowder after molecular-weight reduction. Cryogenic grinding of those materials only adds cost.
+      - id: imidized
+        q: How do PEI, TPI, polyimide, PAI and PBI relate?
+        a: |
+          They are high-temperature polymers built on imide or related heterocyclic rings, with different processing behavior:
+
+          - **PEI** (ULTEM®) — amorphous and melt-processable; ULTEM 1000 has a Tg of 217 °C.
+          - **TPI** (AURUM®) — thermoplastic polyimide; Mitsui lists a Tg of 250 °C.
+          - **Thermoset polyimide** (Vespel®, Kapton®) — does not melt; parts are made by compression and sintering.
+          - **PAI** (Torlon®) — combines amide and imide links. It is molded as a thermoplastic, then post-cured in an extended, staged heat cycle; after full cure it no longer melt-processes.
+          - **PBI** (Celazole®) — a polybenzimidazole, not a polyimide, with a Tg of 427 °C. It is compression-molded, not injection-molded.
+
+          Sources and more values: [materials data reference](/materials/#imidized).
+      - id: sizing
+        q: Why does carbon fiber sizing matter for compounding?
+        a: |
+          Sizing is the thin coating that carbon fiber carries from the producer. It protects the fiber and bonds it to the matrix. Standard sizings are formulated for thermoset resins — for example, Toray lists the standard sizings of T700S for epoxy, phenolic, polyester and vinyl ester. At PEEK, PEI and PPS processing temperatures, sizing chemistry affects how well fiber and matrix bond and how much volatile matter is released, so it is part of compound design.
+
+          On our precision-chop lines, loose roving and off-grade bobbins receive an oversize — a secondary binder that keeps the bundles intact for clean, accurate chopping. [Read the carbon fiber guide](/library/carbon-fiber-sizing-oversizing-chopping/).
+      - id: identification
+        q: How do you identify unknown scrap?
+        a: |
+          By DSC (glass transition, melting point and crystallinity), TGA (filler and ash content), melt flow and density, with spectroscopy where look-alike polymers need it. For example, PSU, PESU and PPSU are separated by glass transition and density, and PEK, PEKK and PEKEKK by melting point.
+      - id: pai-cure
+        q: Why does it matter whether PAI scrap is cured?
+        a: |
+          Uncured PAI — runners, sprues and off-spec parts collected before post-cure — can still be melt-reprocessed. Fully post-cured PAI cannot, and is micronized into powder for use as a filler. Mixing the two lowers the value of both, so keep them apart. [Read the PAI guide](/library/pai-torlon-scrap-cured-vs-uncured/).
+
+  - id: compliance
+    title: Shipping, compliance and sustainability
+    items:
+      - id: cross-border
+        q: How do cross-border scrap shipments work?
+        a: |
+          Every lot is classified under the waste codes of the countries involved before it moves. Within the EU, non-hazardous plastic waste sent for recovery (code EU3011) moves under the general information requirements. Under Regulation (EU) 2024/1157, which applies from 21 May 2026, exports of plastic waste from the EU to OECD countries need prior written notification and consent, and exports to non-OECD countries are banned from 21 November 2026. Shipments from the US must also meet the destination country's import rules.
+
+          We prepare classifications, notifications where required, customs documents and chain-of-custody records, and our EU operations hold the waste-management registrations their activities require. This is general information, not legal advice; the European Commission summarizes the rules [here](https://environment.ec.europa.eu/topics/waste-and-recycling/waste-shipments/plastic-waste-shipments_en).
+      - id: wsr-2026
+        q: What changed in EU waste shipment rules in 2026?
+        a: |
+          Regulation (EU) 2024/1157 replaced the previous Waste Shipment Regulation and applies from 21 May 2026. For plastic waste, the main changes are: exports from the EU to OECD countries require prior written notification and consent; exports to non-OECD countries are prohibited from 21 November 2026, at least until 21 May 2029; and intra-EU shipments of non-hazardous plastic waste for recovery stay exempt from the new controls. [Read our summary](/library/eu-waste-shipment-regulation-2024-1157/).
+      - id: recycled-content
+        q: Can you document recycled content for sustainability reporting?
+        a: |
+          Yes. We provide recycled-content information, material origin and chain-of-custody records to support customers' sustainability reporting. Tell us which reporting framework or certification scheme you work with so we can provide the right data.
+      - id: why-recycle-hpp
+        q: Why recycle high-performance polymers at all?
+        a: |
+          They are among the most expensive polymers to produce, and machining often turns a large part of a stock shape into swarf and offcuts. Keeping that material in use lowers cost for both the generator and the buyer and avoids landfill or incineration of material that can still perform.

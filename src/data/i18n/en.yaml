@@ -1,0 +1,67 @@
+skip: Skip to content
+menu: Menu
+close_menu: Close menu
+language: Language
+home: Home
+sell_scrap: Sell scrap
+contact: Contact
+inquire: Get a quote
+english_site: English site
+brand_sub: International Resources Manufacturing
+nav_label: Main
+breadcrumbs: Breadcrumb
+on_this_page: On this page
+related: Related
+updated: Updated
+read_more: Read more
+footer_contact: Contact
+footer_languages: Languages
+footer_group: Part of the GCMG group — Global Consulting & Manufacturing Group S.L., Andorra.
+footer_tm: All brand names and trademarks are the property of their respective owners. IRM LLC and GCMG S.L. are not affiliated with, endorsed by, or authorized distributors of any supplier named on this site; trade names are used for identification only.
+footer_rights: "International Resources Manufacturing LLC. All rights reserved."
+privacy: Privacy
+email: Email
+phone: Phone
+response: Response time
+cta_title: Have high-performance scrap, or need recycled material?
+cta_text: Send photos and a short description. We reply within 24 hours.
+cta_primary: Get a quote
+cta_secondary: Email us
+
+form:
+  title: Request a quote
+  intro: Tell us what you have or what you need. Photos help us quote scrap faster.
+  name: Full name
+  company: Company
+  email: Email
+  phone: Phone
+  country: Country
+  type: Topic
+  type_options:
+    - {value: sell-scrap, label: Sell scrap}
+    - {value: buy-material, label: Buy recycled material}
+    - {value: compounding, label: Custom or toll compounding}
+    - {value: semi-finished, label: Semi-finished products}
+    - {value: by-products, label: By-product off-take}
+    - {value: other, label: Something else}
+  material: Polymer or fiber
+  material_hint: For example PEEK 450G swarf, Torlon 4301 rod ends, PESU membrane trim
+  quantity: Approximate quantity
+  quantity_hint: For example 300 kg now, about 100 kg per month
+  message: Details
+  message_hint: Form (swarf, rod ends, purge, parts, powder, fiber), condition, location, timing
+  files: Photos or documents (optional)
+  files_hint: Up to 5 files, 10 MB in total. JPG, PNG, PDF.
+  consent: "I agree that IRM may use these details to answer my inquiry, as described in the <a href=\"/privacy/\">privacy notice</a>."
+  required: required
+  submit: Send inquiry
+  sending: Sending…
+  ok: Thank you — your inquiry has been received. We will reply within 24 hours.
+  err: The form could not be sent. Please email us at info@irmllc.co.
+  err_files: Files are too large. Please keep attachments under 10 MB in total, or email them to info@irmllc.co.
+  err_required: Please complete the required fields.
+
+thanks_title: Thank you
+thanks_text: Your inquiry has been received. We will reply within 24 hours.
+notfound_title: Page not found
+notfound_text: The page you were looking for doesn't exist or has moved.

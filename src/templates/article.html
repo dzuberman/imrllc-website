@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% import "_partials.html" as ui %}
+{% block main %}
+<section class="page-hero">
+  <div class="wrap wrap--text">
+    {{ ui.crumbs(page, t, lang) }}
+    {% if page.meta.get('kicker') %}<p class="eyebrow">{{ page.meta.kicker }}</p>{% endif %}
+    <h1>{{ page.meta.title }}</h1>
+    {% if page.meta.get('lead') %}<p class="lead">{{ page.meta.lead|md }}</p>{% endif %}
+    <p class="article-meta">IRM technical library · {{ t.updated }} {{ page.meta.get('updated', page.meta.get('published', site.build_date)) }}</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap wrap--text">
+    {% if page.toc|length > 2 %}
+    <nav class="toc" aria-label="{{ t.on_this_page }}">
+      <b>{{ t.on_this_page }}</b>
+      <ul>{% for id, name in page.toc %}<li><a href="#{{ id }}">{{ name }}</a></li>{% endfor %}</ul>
+    </nav>
+    {% endif %}
+    <div class="prose">{{ page.body_html }}</div>
+    {% if page.meta.get('related') %}
+    <div class="related">
+      <h2 class="h3">{{ t.related }}</h2>
+      <ul>
+        {% for k in page.meta.related %}{% set p = by_key.get(k, {}).get('en') %}{% if p %}<li><a href="{{ p.url }}">{{ p.meta.get('short') or p.meta.title }}</a></li>{% endif %}{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{{ ui.cta(t, lang) }}
+{% endblock %}

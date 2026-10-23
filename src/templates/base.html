@@ -1,0 +1,58 @@
+{%- set html_lang = lang_meta[lang].hreflang if lang in lang_meta else 'en' -%}
+{%- set seo_title = page.meta.get('seo_title') or (page.meta.get('title') ~ ' | IRM') if page is defined else t.notfound_title ~ ' | IRM' -%}
+{%- set description = page.meta.get('description', '') if page is defined else '' -%}
+{%- set canonical = site.base_url ~ page.url if page is defined else site.base_url ~ '/' -%}
+{%- set is_draft = page is defined and page.draft -%}
+{%- set noindex = (page is not defined) or is_draft or page.meta.get('noindex') -%}
+<!doctype html>
+<html lang="{{ html_lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ seo_title }}</title>
+{% if description %}<meta name="description" content="{{ description }}">
+{% endif %}
+{% if noindex %}<meta name="robots" content="noindex, nofollow">
+{% else %}<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="{{ canonical }}">
+{% if alternates|length > 1 %}
+{% for hl, u in alternates %}<link rel="alternate" hreflang="{{ hl }}" href="{{ site.base_url }}{{ u }}">
+{% endfor %}<link rel="alternate" hreflang="x-default" href="{{ site.base_url }}{{ url_for(page.key, 'en') }}">
+{% endif %}
+{% endif %}
+<meta name="theme-color" content="#08090a">
+<meta property="og:type" content="{{ 'article' if page is defined and page.meta.get('template') == 'article' else 'website' }}">
+<meta property="og:site_name" content="IRM — International Resources Manufacturing LLC">
+<meta property="og:title" content="{{ page.meta.get('og_title') or page.meta.get('title') if page is defined else t.notfound_title }}">
+{% if description %}<meta property="og:description" content="{{ description }}">
+{% endif %}
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ site.base_url }}/assets/img/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="IRM — high-performance polymer recycling, compounding and technical fiber processing">
+<meta property="og:locale" content="{{ {'en':'en_US','de':'de_DE','fr':'fr_FR','it':'it_IT','es':'es_ES','pt':'pt_BR','zh':'zh_CN','ja':'ja_JP','ko':'ko_KR'}[lang] }}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/assets/fonts/dm-sans-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ asset('css/site.css') }}">
+{% block head_extra %}{% endblock %}
+{% block schema %}{% include "_schema.html" %}{% endblock %}
+</head>
+<body class="lang-{{ lang }}">
+<a class="skip-link" href="#main">{{ t.skip }}</a>
+{% if is_draft %}
+<div class="draft-banner" role="note"><div class="wrap"><strong>Draft — not published.</strong> This page is built only for previews and is excluded from the live site and the sitemap.</div></div>
+{% endif %}
+{% include "_header.html" %}
+<main id="main" tabindex="-1">
+{% block main %}{% endblock %}
+</main>
+{% include "_footer.html" %}
+<script src="{{ asset('js/site.js') }}" defer></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

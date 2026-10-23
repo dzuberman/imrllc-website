@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "_partials.html" as ui %}
+{% block main %}
+{{ ui.page_hero(page, t, lang) }}
+<section class="section">
+  <div class="wrap">
+    {% if page.body_html|trim %}<div class="prose section-head">{{ page.body_html }}</div>{% endif %}
+    <div class="grid grid--3">
+      {% for a in library_articles() %}
+      <a class="card card--link" href="{{ a.url }}">
+        <p class="card-kicker">{{ a.meta.get('kicker', 'Guide') }}</p>
+        <h3>{{ a.meta.title }}</h3>
+        <p>{{ a.meta.get('summary') or a.meta.get('description', '') }}</p>
+        <span class="card-more" aria-hidden="true">{{ t.read_more }} →</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{{ ui.cta(t, lang) }}
+{% endblock %}
