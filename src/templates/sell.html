@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% import "_partials.html" as ui %}
+{% import "_form.html" as forms %}
+{% block main %}
+{{ ui.page_hero(page, t, lang) }}
+
+{%- set bt = page.meta.buy_table -%}
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">{{ bt.eyebrow }}</p>
+      <h2>{{ bt.title }}</h2>
+      <p>{{ bt.intro|md }}</p>
+    </div>
+    <div class="table-wrap" role="region" tabindex="0" aria-label="{{ bt.title }}">
+      <table class="data">
+        <caption>{{ bt.caption }}</caption>
+        <thead><tr>{% for c in bt.columns %}<th scope="col">{{ c }}</th>{% endfor %}</tr></thead>
+        <tbody>
+          {% for row in bt.rows %}
+          <tr>
+            <th scope="row">{% if row.get('url') %}<a href="{{ row.url }}"{% if row.get('en') %} hreflang="en"{% endif %}>{{ row.polymer }}</a>{% else %}{{ row.polymer }}{% endif %}</th>
+            <td>{{ row.forms|md }}</td>
+            <td>{{ row.notes|md }}</td>
+            <td class="num">{{ row.lot }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="ref-note">{{ bt.note|md }}</p>
+  </div>
+</section>
+
+{%- set st = page.meta.steps -%}
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">{{ st.eyebrow }}</p>
+      <h2>{{ st.title }}</h2>
+      <p>{{ st.intro|md }}</p>
+    </div>
+    <ol class="steps">
+      {% for s in st['items'] %}<li><h3>{{ s.title }}</h3><p>{{ s.text|md }}</p></li>{% endfor %}
+    </ol>
+  </div>
+</section>
+
+{%- set pr = page.meta.prepare -%}
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">{{ pr.eyebrow }}</p>
+        <h2>{{ pr.title }}</h2>
+        <div class="prose">{{ pr.body|mdblock }}</div>
+      </div>
+      <div>
+        <h2 class="h3">{{ page.meta.why.title }}</h2>
+        <ul class="facts">
+          {% for w in page.meta.why['items'] %}<li><b>{{ w[0] }}</b><span>{{ w[1]|md }}</span></li>{% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if page.body_html|trim %}
+<section class="section section--alt">
+  <div class="wrap"><div class="prose">{{ page.body_html }}</div></div>
+</section>
+{% endif %}
+
+<section class="section" id="inquiry">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">{{ page.meta.contact.eyebrow }}</p>
+        <h2>{{ page.meta.contact.title }}</h2>
+        <p class="lead">{{ page.meta.contact.text|md }}</p>
+        <ul class="contact-list">
+          <li><span class="icon-box">{{ ui.icon('mail') }}</span><span><b>{{ t.email }}</b><a href="mailto:{{ site.email }}">{{ site.email }}</a></span></li>
+          {% if site.phone %}<li><span class="icon-box">{{ ui.icon('phone') }}</span><span><b>{{ t.phone }}</b><a href="{{ site.phone_href }}">{{ site.phone }}</a></span></li>{% endif %}
+          <li><span class="icon-box">{{ ui.icon('clock') }}</span><span><b>{{ t.response }}</b>{{ page.meta.contact.response }}</span></li>
+          {% if page.meta.contact.get('local') %}<li><span class="icon-box">{{ ui.icon('globe') }}</span><span><b>{{ page.meta.contact.local[0] }}</b>{{ page.meta.contact.local[1]|md }}</span></li>{% endif %}
+        </ul>
+      </div>
+      {{ forms.inquiry_form(t, lang, page, 'sell-scrap') }}
+    </div>
+  </div>
+</section>
+{% endblock %}

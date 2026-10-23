@@ -1,0 +1,67 @@
+skip: Ir para o conteúdo
+menu: Menu
+close_menu: Fechar menu
+language: Idioma
+home: Início
+sell_scrap: Vender sucata
+contact: Contato
+inquire: Solicitar cotação
+english_site: Site em inglês
+brand_sub: International Resources Manufacturing
+nav_label: Navegação principal
+breadcrumbs: Trilha de navegação
+on_this_page: Nesta página
+related: Páginas relacionadas
+updated: Atualizado
+read_more: Saiba mais
+footer_contact: Contato
+footer_languages: Idiomas
+footer_group: Parte do grupo GCMG — Global Consulting & Manufacturing Group S.L., Andorra.
+footer_tm: Todas as marcas e nomes comerciais pertencem aos respectivos proprietários. A IRM LLC e a GCMG S.L. não são afiliadas, endossadas nem distribuidoras autorizadas dos fornecedores citados neste site; os nomes comerciais são usados apenas para identificação.
+footer_rights: "International Resources Manufacturing LLC. Todos os direitos reservados."
+privacy: Privacidade
+email: E-mail
+phone: Telefone
+response: Prazo de resposta
+cta_title: Tem sucata de polímeros de alto desempenho ou precisa de material reciclado?
+cta_text: Envie fotos e uma breve descrição. Respondemos em até 24 horas.
+cta_primary: Solicitar cotação
+cta_secondary: Envie um e-mail
+
+form:
+  title: Solicitar cotação
+  intro: Conte o que você tem ou do que precisa. Fotos ajudam a cotar a sucata mais rápido.
+  name: Nome completo
+  company: Empresa
+  email: E-mail
+  phone: Telefone
+  country: País
+  type: Assunto
+  type_options:
+    - {value: sell-scrap, label: Vender sucata}
+    - {value: buy-material, label: Comprar material reciclado}
+    - {value: compounding, label: Compostos sob medida ou industrialização}
+    - {value: semi-finished, label: Semiacabados}
+    - {value: by-products, label: Retirada de subprodutos}
+    - {value: other, label: Outro}
+  material: Polímero ou fibra
+  material_hint: Por exemplo, cavacos de PEEK 450G, pontas de barra Torlon 4301, aparas de membrana de PESU
+  quantity: Quantidade aproximada
+  quantity_hint: Por exemplo, 300 kg agora e cerca de 100 kg por mês
+  message: Detalhes
+  message_hint: Forma (cavacos, pontas de barra, purgas, peças, pó, fibra), condição, localização, prazos
+  files: Fotos ou documentos (opcional)
+  files_hint: Até 5 arquivos, 10 MB no total. JPG, PNG, PDF.
+  consent: "Concordo que a IRM use estes dados para responder à minha solicitação, conforme descrito no <a href=\"/privacy/\" hreflang=\"en\">aviso de privacidade (em inglês)</a>."
+  required: obrigatório
+  submit: Enviar solicitação
+  sending: Enviando…
+  ok: Obrigado — recebemos sua solicitação. Respondemos em até 24 horas.
+  err: Não foi possível enviar o formulário. Escreva para info@irmllc.co.
+  err_files: Os arquivos são grandes demais. Fique abaixo de 10 MB no total ou envie-os para info@irmllc.co.
+  err_required: Preencha os campos obrigatórios.
+
+thanks_title: Obrigado
+thanks_text: Recebemos sua solicitação. Respondemos em até 24 horas.
+notfound_title: Página não encontrada
+notfound_text: A página procurada não existe ou foi movida.

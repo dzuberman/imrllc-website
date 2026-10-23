@@ -1,0 +1,90 @@
+{%- set cur_key = page.key if page is defined else '' -%}
+{%- set home_url = url_for('/', lang) -%}
+{%- macro chevron() -%}<svg viewBox="0 0 10 10" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1.5 3.5 5 7l3.5-3.5"/></svg>{%- endmacro -%}
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ home_url }}" aria-label="IRM LLC — {{ t.home }}">
+      <picture>
+        <source srcset="/assets/img/irm-cube-96.webp 1x, /assets/img/irm-cube-192.webp 2x" type="image/webp">
+        <img src="/assets/img/irm-cube-96.png" width="42" height="42" alt="">
+      </picture>
+      <span class="brand-text"><span class="brand-name">IRM LLC</span><span class="brand-sub">{{ t.brand_sub }}</span></span>
+    </a>
+    {% if lang == 'en' %}
+    <nav class="nav" aria-label="{{ t.nav_label }}">
+      <ul class="nav-list">
+        {% for item in nav.primary %}
+        {% if item.get('items') %}
+        {%- set ns = namespace(cur=false) -%}
+        {%- for sub in item['items'] %}{% if sub.key == cur_key %}{% set ns.cur = true %}{% endif %}{% endfor -%}
+        <li>
+          <button class="nav-trigger{{ ' is-current' if ns.cur }}" type="button" aria-expanded="false" aria-controls="menu-{{ item.id }}">{{ item.label }}{{ chevron() }}</button>
+          <ul class="nav-menu" id="menu-{{ item.id }}" hidden>
+            {% for sub in item['items'] %}
+            <li><a href="{{ url_for(sub.key) }}"{% if sub.key == cur_key %} aria-current="page"{% endif %}>{{ sub.label }}<span>{{ sub.note }}</span></a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% else %}
+        <li><a class="nav-link" href="{{ url_for(item.key) }}"{% if item.key == cur_key %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+    {% else %}
+    <nav class="nav" aria-label="{{ t.nav_label }}">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="{{ home_url }}"{% if cur_key == '/' %} aria-current="page"{% endif %}>{{ t.home }}</a></li>
+        <li><a class="nav-link" href="{{ url_for('/sell-scrap/', lang) }}"{% if cur_key == '/sell-scrap/' %} aria-current="page"{% endif %}>{{ t.sell_scrap }}</a></li>
+        <li><a class="nav-link" href="/" hreflang="en" lang="en">{{ t.english_site }}</a></li>
+      </ul>
+    </nav>
+    {% endif %}
+    {% if site.phone %}<a class="header-phone" href="{{ site.phone_href }}">{{ site.phone }}</a>{% endif %}
+    <div class="lang">
+      <button class="lang-btn" type="button" aria-expanded="false" aria-controls="lang-menu" aria-label="{{ t.language }}: {{ lang_meta[lang].name }}">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+        <span>{{ lang_meta[lang].label }}</span>
+      </button>
+      <ul class="lang-menu" id="lang-menu" hidden>
+        {% for code in langs %}
+        {%- set target = by_key.get(cur_key, {}).get(code) -%}
+        {%- set href = target.url if target else url_for('/', code) -%}
+        <li><a href="{{ href }}" hreflang="{{ lang_meta[code].hreflang }}" lang="{{ lang_meta[code].hreflang }}"{% if code == lang %} aria-current="true"{% endif %}>{{ lang_meta[code].name }}<span>{{ code|upper }}</span></a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <a class="btn btn--primary btn--sm header-cta" href="{{ url_for('/contact/') if lang == 'en' else url_for('/sell-scrap/', lang) ~ '#inquiry' }}">{{ t.inquire }}</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-panel" aria-label="{{ t.menu }}" data-open="{{ t.menu }}" data-close="{{ t.close_menu }}">
+      <svg class="i-open" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" hidden><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+</header>
+<div class="mobile-panel" id="mobile-panel">
+    {% if lang == 'en' %}
+    <ul>
+      <li><a href="{{ url_for('/sell-scrap/') }}"{% if cur_key == '/sell-scrap/' %} aria-current="page"{% endif %}>Sell scrap — what we buy</a></li>
+    </ul>
+    {% for item in nav.primary %}
+    {% if item.get('items') %}
+    <h2>{{ item.label }}</h2>
+    <ul>{% for sub in item['items'] %}<li><a href="{{ url_for(sub.key) }}"{% if sub.key == cur_key %} aria-current="page"{% endif %}>{{ sub.label }}</a></li>{% endfor %}</ul>
+    {% endif %}
+    {% endfor %}
+    <h2>More</h2>
+    <ul>
+      {% for item in nav.primary if not item.get('items') and item.key != '/sell-scrap/' %}<li><a href="{{ url_for(item.key) }}">{{ item.label }}</a></li>{% endfor %}
+      <li><a href="{{ url_for('/materials/') }}">Materials data reference</a></li>
+      <li><a href="{{ url_for('/contact/') }}">Contact</a></li>
+    </ul>
+    <a class="btn btn--primary" href="{{ url_for('/contact/') }}">{{ t.inquire }}</a>
+    {% else %}
+    <ul>
+      <li><a href="{{ home_url }}">{{ t.home }}</a></li>
+      <li><a href="{{ url_for('/sell-scrap/', lang) }}">{{ t.sell_scrap }}</a></li>
+      <li><a href="/" hreflang="en" lang="en">{{ t.english_site }}</a></li>
+    </ul>
+    <a class="btn btn--primary" href="{{ url_for('/sell-scrap/', lang) }}#inquiry">{{ t.inquire }}</a>
+    {% endif %}
+  </div>

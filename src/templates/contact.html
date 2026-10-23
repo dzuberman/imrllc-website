@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% import "_partials.html" as ui %}
+{% import "_form.html" as forms %}
+{%- macro addr(a) -%}<address>{{ a.street }}<br>{{ a.city }}{% if a.region %}, {{ a.region }}{% endif %} {{ a.postal }}<br>{{ a.country_name }}</address>{%- endmacro -%}
+{% block main %}
+{{ ui.page_hero(page, t, lang) }}
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="prose">{{ page.body_html }}</div>
+        <ul class="contact-list">
+          <li><span class="icon-box">{{ ui.icon('mail') }}</span><span><b>{{ t.email }}</b><a href="mailto:{{ site.email }}">{{ site.email }}</a></span></li>
+          {% if site.phone %}<li><span class="icon-box">{{ ui.icon('phone') }}</span><span><b>{{ t.phone }}</b><a href="{{ site.phone_href }}">{{ site.phone }}</a></span></li>{% endif %}
+          {% if site.whatsapp %}<li><span class="icon-box">{{ ui.icon('phone') }}</span><span><b>WhatsApp</b><a href="{{ site.whatsapp }}">{{ site.whatsapp|replace('https://', '') }}</a></span></li>{% endif %}
+          <li><span class="icon-box">{{ ui.icon('clock') }}</span><span><b>{{ t.response }}</b>{{ site.response_time }}</span></li>
+          <li><span class="icon-box">{{ ui.icon('pin') }}</span><span><b>{{ site.addresses.hq.label }}</b>{{ addr(site.addresses.hq) }}</span></li>
+          <li><span class="icon-box">{{ ui.icon('pin') }}</span><span><b>{{ site.addresses.sumter.label }}</b>{{ addr(site.addresses.sumter) }}</span></li>
+          <li><span class="icon-box">{{ ui.icon('mail') }}</span><span><b>{{ site.addresses.charleston.label }}</b>{{ addr(site.addresses.charleston) }}</span></li>
+          <li><span class="icon-box">{{ ui.icon('globe') }}</span><span><b>Japan</b><a href="mailto:{{ site.contacts.japan }}">{{ site.contacts.japan }}</a></span></li>
+        </ul>
+      </div>
+      {{ forms.inquiry_form(t, lang, page, page.meta.get('preset', '')) }}
+    </div>
+  </div>
+</section>
+{% endblock %}

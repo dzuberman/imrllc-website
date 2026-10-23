@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% import "_partials.html" as ui %}
+{% block main %}
+{%- set h = page.meta.hero -%}
+<section class="hero">
+  <canvas class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="eyebrow">{{ h.eyebrow }}</p>
+    <h1>{{ h.h1|safe }}</h1>
+    <p class="lead">{{ h.lead|md }}</p>
+    <div class="hero-actions">
+      <a class="btn btn--primary" href="{{ h.primary.url }}">{{ h.primary.label }}</a>
+      <a class="btn btn--ghost" href="{{ h.secondary.url }}">{{ h.secondary.label }}</a>
+    </div>
+    <ul class="hero-facts">
+      {% for f in h.facts %}<li><b>{{ f[0] }}</b><span>{{ f[1] }}</span></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+{%- set s = page.meta.strip -%}
+<div class="strip">
+  <div class="wrap">
+    <span class="strip-label">{{ s.label }}</span>
+    <ul class="chips">
+      {% for c in s.chips %}<li><a class="chip" href="{{ c.url }}"{% if c.get('en') %} hreflang="en"{% endif %}>{{ c.label }}</a></li>{% endfor %}
+    </ul>
+  </div>
+</div>
+
+{%- set a = page.meta.audiences -%}
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">{{ a.eyebrow }}</p>
+      <h2>{{ a.title }}</h2>
+      <p>{{ a.intro|md }}</p>
+    </div>
+    <div class="grid grid--3">
+      {% for c in a.cards %}
+      <div class="card card--accent">
+        <div class="icon-box">{{ ui.icon(c.icon) }}</div>
+        <h3>{{ c.title }}</h3>
+        <p>{{ c.text|md }}</p>
+        <p class="card-more"><a href="{{ c.url }}"{% if c.get('en') %} hreflang="en"{% endif %}>{{ c.link }} →</a></p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{%- set b = page.meta.lines -%}
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">{{ b.eyebrow }}</p>
+      <h2>{{ b.title }}</h2>
+      <p>{{ b.intro|md }}</p>
+    </div>
+    <div class="grid grid--3">
+      {% for c in b.cards %}
+      <a class="card card--link" href="{{ c.url }}"{% if c.get('en') %} hreflang="en"{% endif %}>
+        <div class="icon-box">{{ ui.icon(c.icon) }}</div>
+        <p class="card-kicker">{{ c.kicker }}</p>
+        <h3>{{ c.title }}</h3>
+        <p>{{ c.text|md }}</p>
+        {% if c.get('tags') %}<div class="tags">{% for tg in c.tags %}<span class="tag">{{ tg }}</span>{% endfor %}</div>{% endif %}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{%- set r = page.meta.routes -%}
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">{{ r.eyebrow }}</p>
+        <h2>{{ r.title }}</h2>
+        <p class="lead">{{ r.intro|md }}</p>
+        {% if r.get('link') %}<p><a class="btn btn--ghost" href="{{ r.link.url }}"{% if r.link.get('en') %} hreflang="en"{% endif %}>{{ r.link.label }}</a></p>{% endif %}
+      </div>
+      <ul class="facts">
+        {% for it in r['items'] %}<li><b>{{ it.title }}</b><span>{{ it.text|md }}</span></li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{%- set n = page.meta.network -%}
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">{{ n.eyebrow }}</p>
+      <h2>{{ n.title }}</h2>
+      <p>{{ n.intro|md }}</p>
+    </div>
+    <div class="grid grid--4">
+      {% for g in n.regions %}
+      <div class="card">
+        <p class="site-type">{{ g.kicker }}</p>
+        <h3>{{ g.name }}</h3>
+        <p>{{ g.text|md }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% if n.get('link') %}<p class="section-link"><a href="{{ n.link.url }}"{% if n.link.get('en') %} hreflang="en"{% endif %}>{{ n.link.label }} →</a></p>{% endif %}
+  </div>
+</section>
+
+{%- set q = page.meta.quality -%}
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">{{ q.eyebrow }}</p>
+      <h2>{{ q.title }}</h2>
+      <p>{{ q.intro|md }}</p>
+    </div>
+    <div class="grid grid--3">
+      {% for it in q['items'] %}
+      <div class="card">
+        <p class="card-kicker">{{ it.metric }}</p>
+        <h3>{{ it.title }}</h3>
+        <p>{{ it.text|md }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% if page.meta.get('library') %}
+{%- set l = page.meta.library -%}
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">{{ l.eyebrow }}</p>
+      <h2>{{ l.title }}</h2>
+      <p>{{ l.intro|md }}</p>
+    </div>
+    {{ ui.card_links(l['keys'], lang, t.read_more) }}
+    <p class="section-link"><a href="{{ url_for('/library/') }}">{{ l.all }} →</a></p>
+  </div>
+</section>
+{% endif %}
+
+{{ ui.cta(t, lang) }}
+{% endblock %}

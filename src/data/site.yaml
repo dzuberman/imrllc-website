@@ -1,0 +1,75 @@
+# IRM site configuration — edit here, then rebuild.
+# Fields left empty are hidden on the site (for example, phone numbers).
+
+base_url: https://irmllc.co
+name: International Resources Manufacturing LLC
+short_name: IRM LLC
+brand: IRM
+group_name: Global Consulting & Manufacturing Group S.L.
+group_short: GCMG
+group_url: https://gcmg.eu/
+
+email: info@irmllc.co
+phone: ""            # e.g. "+1 801 555 0100" — shown in header, contact page and schema when set
+phone_href: ""       # e.g. "tel:+18015550100"
+whatsapp: ""         # e.g. "https://wa.me/18015550100" — shown on contact page when set
+linkedin: ""         # e.g. "https://www.linkedin.com/company/..." — added to schema sameAs when set
+
+response_time: Within 24 hours
+
+addresses:
+  hq:
+    label: Headquarters
+    name: IRM LLC
+    street: 881 W. Baxter Dr., Suite 100
+    city: South Jordan
+    region: UT
+    postal: "84095"
+    country: US
+    country_name: USA
+  sumter:
+    label: Sumter plant
+    name: IRM LLC — Sumter
+    street: 2075 Lynette Drive
+    city: Sumter
+    region: SC
+    postal: "29154"
+    country: US
+    country_name: USA
+  charleston:
+    label: South Carolina office (mailing)
+    name: IRM LLC
+    street: 6650 Rivers Ave, Ste 105, PMB #245157
+    city: North Charleston
+    region: SC
+    postal: "29406"
+    country: US
+    country_name: USA
+  group:
+    label: Group holding
+    name: GCMG S.L.
+    street: C/ Sant Salvador 10A, Pis 0 4-8
+    city: Andorra la Vella
+    region: ""
+    postal: AD500
+    country: AD
+    country_name: Andorra
+
+contacts:
+  japan: yoshi.k@gcmg.eu
+
+# Form endpoint (Cloudflare Pages Function in /functions/api/inquiry.js)
+form_endpoint: /api/inquiry
+# Cloudflare Turnstile site key — leave empty to disable the widget
+turnstile_site_key: ""
+
+languages:
+  - {code: en, name: English, label: EN, hreflang: en}
+  - {code: de, name: Deutsch, label: DE, hreflang: de}
+  - {code: fr, name: Français, label: FR, hreflang: fr}
+  - {code: it, name: Italiano, label: IT, hreflang: it}
+  - {code: es, name: Español, label: ES, hreflang: es}
+  - {code: pt, name: Português, label: PT, hreflang: pt}
+  - {code: zh, name: 中文, label: 中文, hreflang: zh-Hans}
+  - {code: ja, name: 日本語, label: 日本語, hreflang: ja}
+  - {code: ko, name: 한국어, label: 한국어, hreflang: ko}

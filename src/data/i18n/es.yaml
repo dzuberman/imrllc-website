@@ -1,0 +1,67 @@
+skip: Ir al contenido
+menu: Menú
+close_menu: Cerrar menú
+language: Idioma
+home: Inicio
+sell_scrap: Vender residuos
+contact: Contacto
+inquire: Solicitar cotización
+english_site: Sitio en inglés
+brand_sub: International Resources Manufacturing
+nav_label: Navegación principal
+breadcrumbs: Ruta de navegación
+on_this_page: En esta página
+related: Páginas relacionadas
+updated: Actualizado
+read_more: Más información
+footer_contact: Contacto
+footer_languages: Idiomas
+footer_group: Parte del grupo GCMG — Global Consulting & Manufacturing Group S.L., Andorra.
+footer_tm: Todas las marcas y nombres comerciales pertenecen a sus respectivos propietarios. IRM LLC y GCMG S.L. no están afiliadas ni respaldadas por los proveedores mencionados en este sitio, ni son sus distribuidores autorizados; los nombres comerciales se usan solo con fines de identificación.
+footer_rights: "International Resources Manufacturing LLC. Todos los derechos reservados."
+privacy: Privacidad
+email: Correo electrónico
+phone: Teléfono
+response: Tiempo de respuesta
+cta_title: ¿Tiene residuos de polímeros de alto rendimiento o necesita material reciclado?
+cta_text: Envíe fotos y una breve descripción. Respondemos en 24 horas.
+cta_primary: Solicitar cotización
+cta_secondary: Escríbanos
+
+form:
+  title: Solicitar cotización
+  intro: Cuéntenos qué tiene o qué necesita. Las fotos nos ayudan a cotizar residuos más rápido.
+  name: Nombre completo
+  company: Empresa
+  email: Correo electrónico
+  phone: Teléfono
+  country: País
+  type: Asunto
+  type_options:
+    - {value: sell-scrap, label: Vender residuos}
+    - {value: buy-material, label: Comprar material reciclado}
+    - {value: compounding, label: Compuestos a medida o a maquila}
+    - {value: semi-finished, label: Semielaborados}
+    - {value: by-products, label: Retiro de subproductos}
+    - {value: other, label: Otro}
+  material: Polímero o fibra
+  material_hint: Por ejemplo, viruta de PEEK 450G, recortes de barra Torlon 4301, recortes de membrana de PESU
+  quantity: Cantidad aproximada
+  quantity_hint: Por ejemplo, 300 kg ahora y unos 100 kg al mes
+  message: Detalles
+  message_hint: Forma (viruta, recortes de barra, purgas, piezas, polvo, fibra), estado, ubicación, plazos
+  files: Fotos o documentos (opcional)
+  files_hint: Hasta 5 archivos, 10 MB en total. JPG, PNG, PDF.
+  consent: "Acepto que IRM utilice estos datos para responder a mi consulta, según se describe en el <a href=\"/privacy/\" hreflang=\"en\">aviso de privacidad (en inglés)</a>."
+  required: obligatorio
+  submit: Enviar consulta
+  sending: Enviando…
+  ok: Gracias — hemos recibido su consulta. Respondemos en 24 horas.
+  err: No se pudo enviar el formulario. Escríbanos a info@irmllc.co.
+  err_files: Los archivos son demasiado grandes. Manténgase por debajo de 10 MB en total o envíelos a info@irmllc.co.
+  err_required: Complete los campos obligatorios.
+
+thanks_title: Gracias
+thanks_text: Hemos recibido su consulta. Respondemos en 24 horas.
+notfound_title: Página no encontrada
+notfound_text: La página que busca no existe o se ha movido.

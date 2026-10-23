@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% import "_partials.html" as ui %}
+{% block main %}
+{{ ui.page_hero(page, t, lang) }}
+<section class="section">
+  <div class="wrap wrap--text">
+    <nav class="toc" aria-label="{{ t.on_this_page }}">
+      <b>{{ t.on_this_page }}</b>
+      <ul>{% for g in faq.groups %}<li><a href="#{{ g.id }}">{{ g.title }}</a></li>{% endfor %}</ul>
+    </nav>
+    {% for g in faq.groups %}
+    <section class="faq-group" id="{{ g.id }}" aria-labelledby="{{ g.id }}-h">
+      <h2 id="{{ g.id }}-h">{{ g.title }}</h2>
+      {% for q in g['items'] %}
+      <details class="faq" id="{{ q.id }}">
+        <summary>{{ q.q }}</summary>
+        <div class="faq-body">{{ q.a|mdblock }}</div>
+      </details>
+      {% endfor %}
+    </section>
+    {% endfor %}
+  </div>
+</section>
+{{ ui.cta(t, lang) }}
+{% endblock %}

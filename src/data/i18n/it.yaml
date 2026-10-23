@@ -1,0 +1,67 @@
+skip: Vai al contenuto
+menu: Menu
+close_menu: Chiudi menu
+language: Lingua
+home: Home
+sell_scrap: Vendi scarti
+contact: Contatti
+inquire: Richiedi un preventivo
+english_site: Sito in inglese
+brand_sub: International Resources Manufacturing
+nav_label: Navigazione principale
+breadcrumbs: Percorso di navigazione
+on_this_page: In questa pagina
+related: Pagine correlate
+updated: Aggiornato
+read_more: Scopri di più
+footer_contact: Contatti
+footer_languages: Lingue
+footer_group: Parte del gruppo GCMG — Global Consulting & Manufacturing Group S.L., Andorra.
+footer_tm: Tutti i marchi e i nomi commerciali appartengono ai rispettivi titolari. IRM LLC e GCMG S.L. non sono affiliate, approvate o distributori autorizzati dei fornitori citati in questo sito; i nomi commerciali sono usati solo a scopo identificativo.
+footer_rights: "International Resources Manufacturing LLC. Tutti i diritti riservati."
+privacy: Privacy
+email: E-mail
+phone: Telefono
+response: Tempi di risposta
+cta_title: Avete scarti di polimeri ad alte prestazioni o vi serve materiale riciclato?
+cta_text: Inviate foto e una breve descrizione. Rispondiamo entro 24 ore.
+cta_primary: Richiedi un preventivo
+cta_secondary: Scrivici
+
+form:
+  title: Richiedi un preventivo
+  intro: Diteci cosa avete o di cosa avete bisogno. Le foto ci aiutano a quotare gli scarti più rapidamente.
+  name: Nome e cognome
+  company: Azienda
+  email: E-mail
+  phone: Telefono
+  country: Paese
+  type: Argomento
+  type_options:
+    - {value: sell-scrap, label: Vendere scarti}
+    - {value: buy-material, label: Acquistare materiale riciclato}
+    - {value: compounding, label: Compounding su misura o conto terzi}
+    - {value: semi-finished, label: Semilavorati}
+    - {value: by-products, label: Ritiro di sottoprodotti}
+    - {value: other, label: Altro}
+  material: Polimero o fibra
+  material_hint: Ad esempio trucioli di PEEK 450G, spezzoni di barre Torlon 4301, ritagli di membrane PESU
+  quantity: Quantità indicativa
+  quantity_hint: Ad esempio 300 kg subito, circa 100 kg al mese
+  message: Dettagli
+  message_hint: Forma (trucioli, spezzoni, spurghi, pezzi, polvere, fibra), condizioni, ubicazione, tempistiche
+  files: Foto o documenti (facoltativo)
+  files_hint: Fino a 5 file, 10 MB in totale. JPG, PNG, PDF.
+  consent: "Accetto che IRM utilizzi questi dati per rispondere alla mia richiesta, come descritto nell’<a href=\"/privacy/\" hreflang=\"en\">informativa sulla privacy (in inglese)</a>."
+  required: obbligatorio
+  submit: Invia richiesta
+  sending: Invio in corso…
+  ok: Grazie — abbiamo ricevuto la vostra richiesta. Rispondiamo entro 24 ore.
+  err: Non è stato possibile inviare il modulo. Scriveteci a info@irmllc.co.
+  err_files: I file sono troppo grandi. Restate sotto i 10 MB totali o inviateli a info@irmllc.co.
+  err_required: Compilate i campi obbligatori.
+
+thanks_title: Grazie
+thanks_text: Abbiamo ricevuto la vostra richiesta. Rispondiamo entro 24 ore.
+notfound_title: Pagina non trovata
+notfound_text: La pagina cercata non esiste o è stata spostata.

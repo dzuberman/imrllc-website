@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% import "_partials.html" as ui %}
+{% block main %}
+{{ ui.page_hero(page, t, lang) }}
+<section class="section">
+  <div class="wrap">
+    <div class="prose">{{ page.body_html }}</div>
+    <nav class="toc" aria-label="{{ t.on_this_page }}">
+      <b>{{ t.on_this_page }}</b>
+      <ul>
+        {% for fam in materials.families %}<li><a href="#{{ fam.id }}">{{ fam.name }}</a></li>{% endfor %}
+        <li><a href="#fibers">Fibers</a></li>
+      </ul>
+    </nav>
+    {% for fam in materials.families %}
+    <section class="ref-family" id="{{ fam.id }}" aria-labelledby="{{ fam.id }}-h">
+      <h2 id="{{ fam.id }}-h">{{ fam.name }}</h2>
+      <p>{{ fam.intro }}</p>
+      <div class="table-wrap" role="region" tabindex="0" aria-label="{{ fam.name }} reference data">
+        <table class="data">
+          <thead>
+            <tr><th scope="col">Polymer</th><th scope="col">Reference grade</th><th scope="col" class="num">Tg (°C)</th><th scope="col" class="num">Tm (°C)</th><th scope="col" class="num">Density (g/cm³)</th><th scope="col">Other datasheet values</th><th scope="col">Source</th></tr>
+          </thead>
+          <tbody>
+            {% for r in fam.rows %}
+            <tr>
+              <th scope="row">{{ r.polymer }}</th>
+              <td>{{ r.grade }}</td>
+              <td class="num">{{ r.tg or '—' }}</td>
+              <td class="num">{{ r.tm or '—' }}</td>
+              <td class="num">{{ r.density or '—' }}</td>
+              <td>{{ r.other or '—' }}</td>
+              <td><a href="{{ r.source.url }}" rel="noopener">{{ r.source.title }}</a>{% if r.get('source2') %}; <a href="{{ r.source2.url }}" rel="noopener">{{ r.source2.title }}</a>{% endif %}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+    {% endfor %}
+    <section class="ref-family" id="fibers" aria-labelledby="fibers-h">
+      <h2 id="fibers-h">Fibers</h2>
+      <div class="table-wrap" role="region" tabindex="0" aria-label="Fiber reference data">
+        <table class="data">
+          <thead><tr><th scope="col">Fiber</th><th scope="col">Datasheet values</th><th scope="col">Source</th></tr></thead>
+          <tbody>
+            {% for f in materials.fibers %}
+            <tr><th scope="row">{{ f.fiber }}</th><td>{{ f.data }}</td><td><a href="{{ f.source.url }}" rel="noopener">{{ f.source.title }}</a></td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <p class="notice">{{ page.meta.notice }}</p>
+  </div>
+</section>
+{{ ui.cta(t, lang) }}
+{% endblock %}

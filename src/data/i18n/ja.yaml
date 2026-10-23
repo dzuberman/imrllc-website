@@ -1,0 +1,67 @@
+skip: 本文へスキップ
+menu: メニュー
+close_menu: メニューを閉じる
+language: 言語
+home: ホーム
+sell_scrap: スクラップ売却
+contact: お問い合わせ
+inquire: 見積もり依頼
+english_site: 英語サイト
+brand_sub: International Resources Manufacturing
+nav_label: メインナビゲーション
+breadcrumbs: パンくずリスト
+on_this_page: このページの内容
+related: 関連ページ
+updated: 更新日
+read_more: 詳しく見る
+footer_contact: お問い合わせ
+footer_languages: 言語
+footer_group: GCMGグループ（Global Consulting & Manufacturing Group S.L.、アンドラ）の一員です。
+footer_tm: 記載のブランド名・商標はすべて各所有者に帰属します。IRM LLCおよびGCMG S.L.は、本サイトに記載のサプライヤーとは提携関係になく、推奨や正規代理店の認定も受けていません。商品名は識別のためにのみ使用しています。
+footer_rights: "International Resources Manufacturing LLC. All rights reserved."
+privacy: プライバシー
+email: メール
+phone: 電話
+response: 回答までの目安
+cta_title: 高機能樹脂のスクラップをお持ちですか？再生材をお探しですか？
+cta_text: 写真と簡単な説明をお送りください。24時間以内にご返信します。
+cta_primary: 見積もり依頼
+cta_secondary: メールで問い合わせる
+
+form:
+  title: 見積もり依頼
+  intro: お持ちの材料、または必要な材料をお知らせください。写真があるとスクラップの見積もりが早くなります。
+  name: 氏名
+  company: 会社名
+  email: メールアドレス
+  phone: 電話番号
+  country: 国・地域
+  type: ご用件
+  type_options:
+    - {value: sell-scrap, label: スクラップを売却したい}
+    - {value: buy-material, label: 再生材を購入したい}
+    - {value: compounding, label: 受託・カスタムコンパウンド}
+    - {value: semi-finished, label: 半製品}
+    - {value: by-products, label: 副産物の引き取り}
+    - {value: other, label: その他}
+  material: 樹脂または繊維
+  material_hint: 例：PEEK 450G 切削くず、Torlon 4301 丸棒端材、PESU 膜の端材
+  quantity: おおよその数量
+  quantity_hint: 例：現在300 kg、毎月約100 kg
+  message: 詳細
+  message_hint: 形状（切削くず、端材、パージ材、部品、粉体、繊維）、状態、所在地、時期
+  files: 写真・資料（任意）
+  files_hint: 最大5ファイル、合計10 MBまで。JPG、PNG、PDF。
+  consent: "<a href=\"/privacy/\" hreflang=\"en\">プライバシー通知（英語）</a>に記載のとおり、IRMがお問い合わせへの回答のためにこれらの情報を使用することに同意します。"
+  required: 必須
+  submit: 送信する
+  sending: 送信中…
+  ok: ありがとうございます。お問い合わせを受け付けました。24時間以内にご返信します。
+  err: フォームを送信できませんでした。info@irmllc.co までメールでご連絡ください。
+  err_files: ファイルが大きすぎます。合計10 MB以内にするか、info@irmllc.co へメールでお送りください。
+  err_required: 必須項目をご入力ください。
+
+thanks_title: ありがとうございます
+thanks_text: お問い合わせを受け付けました。24時間以内にご返信します。
+notfound_title: ページが見つかりません
+notfound_text: お探しのページは存在しないか、移動しました。

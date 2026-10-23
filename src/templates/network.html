@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% import "_partials.html" as ui %}
+{% block main %}
+{{ ui.page_hero(page, t, lang) }}
+<section class="section">
+  <div class="wrap">
+    {% if page.body_html|trim %}<div class="prose section-head">{{ page.body_html }}</div>{% endif %}
+    {% for region in network.regions %}
+    <section class="region" aria-labelledby="r-{{ region.id }}">
+      <div class="region-head">
+        <h2 id="r-{{ region.id }}">{{ region.name }}</h2>
+        <p>{{ region.tagline }}</p>
+      </div>
+      <div class="grid {{ 'grid--3' if region.sites|length == 3 else 'grid--2' }}">
+        {% for s in region.sites %}
+        <article class="card">
+          <p class="site-type">{{ s.type }}</p>
+          <h3>{% if s.get('url') %}<a href="{{ s.url }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}</h3>
+          <p class="site-loc">{{ s.loc|md }}</p>
+          <p>{{ s.text|md }}</p>
+          {% if s.get('tags') %}<div class="tags">{% for tg in s.tags %}<span class="tag">{{ tg }}</span>{% endfor %}</div>{% endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+</section>
+{{ ui.cta(t, lang) }}
+{% endblock %}

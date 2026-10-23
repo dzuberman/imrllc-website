@@ -1,0 +1,37 @@
+{%- set org = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": site.base_url ~ "/#organization",
+  "name": site.name,
+  "alternateName": ["IRM", "IRM LLC"],
+  "url": site.base_url ~ "/",
+  "logo": site.base_url ~ "/assets/img/irm-logo-512.png",
+  "email": site.email,
+  "address": {"@type": "PostalAddress", "streetAddress": site.addresses.hq.street, "addressLocality": site.addresses.hq.city, "addressRegion": site.addresses.hq.region, "postalCode": site.addresses.hq.postal, "addressCountry": site.addresses.hq.country},
+  "parentOrganization": {"@type": "Organization", "@id": "https://gcmg.eu/#organization", "name": site.group_name, "alternateName": "GCMG", "url": site.group_url},
+  "contactPoint": [{"@type": "ContactPoint", "contactType": "sales", "email": site.email, "availableLanguage": ["English"]}],
+  "knowsAbout": ["PEEK recycling", "PEKK recycling", "Polyetherimide (PEI) recycling", "Polyamide-imide (PAI) recycling", "Polyimide recycling", "Polysulfone (PSU, PESU, PPSU) recycling", "PPS recycling", "Fluoropolymer recycling", "PTFE micronization", "Carbon fiber chopping", "Para-aramid fiber recycling", "Polymer compounding", "Twin-screw extrusion"]
+} -%}
+{%- if site.phone -%}{%- set _ = org.update({"telephone": site.phone}) -%}{%- set _ = org["contactPoint"][0].update({"telephone": site.phone}) -%}{%- endif -%}
+{%- if site.linkedin -%}{%- set _ = org.update({"sameAs": [site.linkedin]}) -%}{%- endif -%}
+<script type="application/ld+json">{{ org|jsonld }}</script>
+{% if page is defined and page.url == '/' %}
+<script type="application/ld+json">{{ {"@context": "https://schema.org", "@type": "WebSite", "@id": site.base_url ~ "/#website", "url": site.base_url ~ "/", "name": "IRM — International Resources Manufacturing LLC", "publisher": {"@id": site.base_url ~ "/#organization"}, "inLanguage": "en-US"}|jsonld }}</script>
+{% endif %}
+{% if page is defined and page.url != url_for('/', lang) %}
+{%- set crumbs = [{"@type": "ListItem", "position": 1, "name": t.home, "item": site.base_url ~ url_for('/', lang)}] -%}
+{%- for c in page.meta.get('crumbs', []) -%}{%- set _ = crumbs.append({"@type": "ListItem", "position": loop.index + 1, "name": c[0], "item": site.base_url ~ c[1]}) -%}{%- endfor -%}
+{%- set _ = crumbs.append({"@type": "ListItem", "position": crumbs|length + 1, "name": page.meta.get('short') or page.meta.get('title'), "item": site.base_url ~ page.url}) -%}
+<script type="application/ld+json">{{ {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": crumbs}|jsonld }}</script>
+{% endif %}
+{% if page is defined and page.meta.get('template') == 'article' %}
+<script type="application/ld+json">{{ {"@context": "https://schema.org", "@type": "TechArticle", "headline": page.meta.get('title'), "description": page.meta.get('description', ''), "inLanguage": "en-US", "datePublished": page.meta.get('published', site.build_date), "dateModified": page.meta.get('updated', page.meta.get('published', site.build_date)), "author": {"@id": site.base_url ~ "/#organization"}, "publisher": {"@id": site.base_url ~ "/#organization"}, "mainEntityOfPage": site.base_url ~ page.url}|jsonld }}</script>
+{% endif %}
+{% if page is defined and page.meta.get('schema') == 'sumter' %}
+<script type="application/ld+json">{{ {"@context": "https://schema.org", "@type": "LocalBusiness", "@id": site.base_url ~ "/locations/sumter-sc/#plant", "name": "IRM LLC — Sumter, SC", "url": site.base_url ~ "/locations/sumter-sc/", "image": site.base_url ~ "/assets/img/irm-logo-512.png", "email": site.email, "address": {"@type": "PostalAddress", "streetAddress": site.addresses.sumter.street, "addressLocality": site.addresses.sumter.city, "addressRegion": site.addresses.sumter.region, "postalCode": site.addresses.sumter.postal, "addressCountry": "US"}, "parentOrganization": {"@id": site.base_url ~ "/#organization"}}|jsonld }}</script>
+{% endif %}
+{% if page is defined and page.meta.get('template') == 'faq' %}
+{%- set qs = [] -%}
+{%- for g in faq.groups -%}{%- for q in g['items'] -%}{%- set _ = qs.append({"@type": "Question", "name": q.q, "acceptedAnswer": {"@type": "Answer", "text": (q.a|mdblock|striptags)}}) -%}{%- endfor -%}{%- endfor -%}
+<script type="application/ld+json">{{ {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": qs}|jsonld }}</script>
+{% endif %}

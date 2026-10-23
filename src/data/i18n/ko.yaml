@@ -1,0 +1,67 @@
+skip: 본문으로 건너뛰기
+menu: 메뉴
+close_menu: 메뉴 닫기
+language: 언어
+home: 홈
+sell_scrap: 스크랩 판매
+contact: 문의
+inquire: 견적 요청
+english_site: 영문 사이트
+brand_sub: International Resources Manufacturing
+nav_label: 주 메뉴
+breadcrumbs: 이동 경로
+on_this_page: 이 페이지의 내용
+related: 관련 페이지
+updated: 업데이트
+read_more: 자세히 보기
+footer_contact: 연락처
+footer_languages: 언어
+footer_group: GCMG 그룹(Global Consulting & Manufacturing Group S.L., 안도라) 소속입니다.
+footer_tm: 모든 브랜드명과 상표는 각 소유자의 자산입니다. IRM LLC와 GCMG S.L.은 이 사이트에 언급된 공급업체와 제휴하거나 보증을 받지 않았으며, 공식 대리점도 아닙니다. 상품명은 식별 목적으로만 사용합니다.
+footer_rights: "International Resources Manufacturing LLC. All rights reserved."
+privacy: 개인정보
+email: 이메일
+phone: 전화
+response: 답변 시간
+cta_title: 고성능 수지 스크랩이 있거나 재생 소재가 필요하신가요?
+cta_text: 사진과 간단한 설명을 보내 주세요. 24시간 이내에 답변드립니다.
+cta_primary: 견적 요청
+cta_secondary: 이메일 보내기
+
+form:
+  title: 견적 요청
+  intro: 보유하신 소재나 필요한 소재를 알려 주세요. 사진이 있으면 스크랩 견적이 빨라집니다.
+  name: 성명
+  company: 회사명
+  email: 이메일
+  phone: 전화번호
+  country: 국가
+  type: 문의 유형
+  type_options:
+    - {value: sell-scrap, label: 스크랩 판매}
+    - {value: buy-material, label: 재생 소재 구매}
+    - {value: compounding, label: 맞춤·위탁 컴파운딩}
+    - {value: semi-finished, label: 반제품}
+    - {value: by-products, label: 부산물 인수}
+    - {value: other, label: 기타}
+  material: 수지 또는 섬유
+  material_hint: 예) PEEK 450G 절삭칩, Torlon 4301 봉재 자투리, PESU 멤브레인 자투리
+  quantity: 대략적인 수량
+  quantity_hint: 예) 현재 300 kg, 매월 약 100 kg
+  message: 상세 내용
+  message_hint: 형태(절삭칩, 봉재 자투리, 퍼지재, 부품, 분말, 섬유), 상태, 위치, 일정
+  files: 사진 또는 문서(선택)
+  files_hint: 최대 5개 파일, 총 10 MB. JPG, PNG, PDF.
+  consent: "<a href=\"/privacy/\" hreflang=\"en\">개인정보 처리 안내(영문)</a>에 따라 IRM이 문의 답변을 위해 이 정보를 사용하는 데 동의합니다."
+  required: 필수
+  submit: 문의 보내기
+  sending: 보내는 중…
+  ok: 감사합니다. 문의가 접수되었습니다. 24시간 이내에 답변드립니다.
+  err: 양식을 보낼 수 없습니다. info@irmllc.co 로 이메일을 보내 주세요.
+  err_files: 파일이 너무 큽니다. 총 10 MB 이하로 줄이거나 info@irmllc.co 로 보내 주세요.
+  err_required: 필수 항목을 입력해 주세요.
+
+thanks_title: 감사합니다
+thanks_text: 문의가 접수되었습니다. 24시간 이내에 답변드립니다.
+notfound_title: 페이지를 찾을 수 없습니다
+notfound_text: 찾으시는 페이지가 없거나 이동되었습니다.

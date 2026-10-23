@@ -1,0 +1,67 @@
+skip: Zum Inhalt springen
+menu: Menü
+close_menu: Menü schließen
+language: Sprache
+home: Startseite
+sell_scrap: Schrott verkaufen
+contact: Kontakt
+inquire: Angebot anfragen
+english_site: Englische Website
+brand_sub: International Resources Manufacturing
+nav_label: Hauptnavigation
+breadcrumbs: Brotkrümelnavigation
+on_this_page: Auf dieser Seite
+related: Verwandte Seiten
+updated: Aktualisiert
+read_more: Mehr erfahren
+footer_contact: Kontakt
+footer_languages: Sprachen
+footer_group: Teil der GCMG-Gruppe — Global Consulting & Manufacturing Group S.L., Andorra.
+footer_tm: Alle Marken- und Produktnamen sind Eigentum ihrer jeweiligen Inhaber. IRM LLC und GCMG S.L. sind mit keinem der auf dieser Website genannten Lieferanten verbunden, werden von ihnen nicht unterstützt und sind keine autorisierten Händler; Handelsnamen dienen nur der Identifizierung.
+footer_rights: "International Resources Manufacturing LLC. Alle Rechte vorbehalten."
+privacy: Datenschutz
+email: E-Mail
+phone: Telefon
+response: Antwortzeit
+cta_title: Sie haben Hochleistungskunststoff-Schrott oder brauchen Rezyklat?
+cta_text: Senden Sie Fotos und eine kurze Beschreibung. Wir antworten innerhalb von 24 Stunden.
+cta_primary: Angebot anfragen
+cta_secondary: E-Mail senden
+
+form:
+  title: Angebot anfragen
+  intro: Beschreiben Sie, was Sie haben oder benötigen. Fotos helfen uns, Schrott schneller zu bewerten.
+  name: Vollständiger Name
+  company: Unternehmen
+  email: E-Mail
+  phone: Telefon
+  country: Land
+  type: Thema
+  type_options:
+    - {value: sell-scrap, label: Schrott verkaufen}
+    - {value: buy-material, label: Rezyklat kaufen}
+    - {value: compounding, label: Compoundierung / Lohnfertigung}
+    - {value: semi-finished, label: Halbzeuge}
+    - {value: by-products, label: Abnahme von Nebenprodukten}
+    - {value: other, label: Sonstiges}
+  material: Polymer oder Faser
+  material_hint: Zum Beispiel PEEK-450G-Späne, Torlon-4301-Stangenreste, PESU-Membranabschnitte
+  quantity: Ungefähre Menge
+  quantity_hint: Zum Beispiel 300 kg sofort, etwa 100 kg pro Monat
+  message: Details
+  message_hint: Form (Späne, Stangenreste, Spülmaterial, Teile, Pulver, Faser), Zustand, Standort, Zeitrahmen
+  files: Fotos oder Dokumente (optional)
+  files_hint: Bis zu 5 Dateien, insgesamt 10 MB. JPG, PNG, PDF.
+  consent: "Ich bin einverstanden, dass IRM diese Angaben zur Beantwortung meiner Anfrage verwendet, wie in der <a href=\"/privacy/\" hreflang=\"en\">Datenschutzerklärung (Englisch)</a> beschrieben."
+  required: Pflichtfeld
+  submit: Anfrage senden
+  sending: Wird gesendet …
+  ok: Vielen Dank — Ihre Anfrage ist eingegangen. Wir antworten innerhalb von 24 Stunden.
+  err: Das Formular konnte nicht gesendet werden. Bitte schreiben Sie uns an info@irmllc.co.
+  err_files: Die Dateien sind zu groß. Bitte bleiben Sie unter 10 MB insgesamt oder senden Sie sie an info@irmllc.co.
+  err_required: Bitte füllen Sie die Pflichtfelder aus.
+
+thanks_title: Vielen Dank
+thanks_text: Ihre Anfrage ist eingegangen. Wir antworten innerhalb von 24 Stunden.
+notfound_title: Seite nicht gefunden
+notfound_text: Die gesuchte Seite existiert nicht oder wurde verschoben.

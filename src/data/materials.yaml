@@ -1,0 +1,253 @@
+# Verified reference data for /materials/.
+# Every value below was read from the cited supplier or distributor datasheet (checked October 2026).
+# Values are typical properties of the named reference grade, not specifications.
+# Rule: do not add a number here without a source URL that states it.
+
+families:
+  - id: paek
+    name: PolyArylEtherKetones (PAEK)
+    intro: >-
+      Semi-crystalline aromatic polyketones. Melting point rises with ketone content
+      (PEEK → PEK → PEKEKK), while PEKK's terephthalic/isophthalic ratio and LMPAEK's
+      copolymer design lower it. DSC melting point is the first identification check for
+      PAEK scrap; close melting points need spectroscopy to separate.
+    rows:
+      - polymer: PEEK
+        grade: VICTREX PEEK 450G
+        tg: "143 (onset) / 150 (midpoint)"
+        tm: "343"
+        density: "1.30"
+        other: "HDT 152 °C (1.8 MPa); tensile modulus 4.0 GPa; melt viscosity 350 Pa·s at 400 °C"
+        source: {title: "Victrex 450G datasheet", url: "https://www.victrex.com/en/downloads/datasheets/victrex-peek-450g"}
+      - polymer: PEEK, 30% carbon fiber
+        grade: VICTREX PEEK 450CA30
+        tg: ""
+        tm: ""
+        density: "1.40"
+        other: "Tensile strength 265 MPa; tensile modulus 28 GPa; HDT 336 °C (1.8 MPa)"
+        source: {title: "Victrex 450CA30 datasheet", url: "https://www.victrex.com/en/downloads/datasheets/victrex-peek-450ca30"}
+      - polymer: PEK
+        grade: VICTREX HT G22
+        tg: "152 (onset) / 160 (midpoint)"
+        tm: "373"
+        density: "1.30"
+        other: "HDT 163 °C (1.8 MPa)"
+        source: {title: "Victrex HT G22 datasheet", url: "https://victrex.com/downloads/datasheets/victrex-ht-g22"}
+      - polymer: PEKEKK
+        grade: VICTREX ST G45
+        tg: "162 (onset) / 169 (midpoint)"
+        tm: "387"
+        density: "1.30"
+        other: "HDT 172 °C (1.8 MPa)"
+        source: {title: "Victrex ST G45 datasheet", url: "https://victrex.com/downloads/datasheets/victrex-st-g45"}
+      - polymer: PEKK, 7000 series
+        grade: Kepstan 7001 / 7002 / 7003
+        tg: "162"
+        tm: "325 (7001); 336 (7002, 7003)"
+        density: "1.29"
+        other: "Slower crystallization; used where delayed crystallization helps (e.g. thermoforming)"
+        source: {title: "Arkema Kepstan 7000 series TDS", url: "https://hpp.arkema.com/assets/arkema/TDS%20ARKEMA%20KEPSTAN%20serie%207000.pdf"}
+      - polymer: PEKK, 8000 series
+        grade: Kepstan 8001 / 8002 / 8003
+        tg: "165"
+        tm: "355 (8001); 360 (8002, 8003)"
+        density: "1.29"
+        other: ""
+        source: {title: "Arkema Kepstan 8000 series TDS", url: "https://hpp.arkema.com/assets/arkema/TDS%20ARKEMA%20KEPSTAN%20serie%208000.pdf"}
+      - polymer: PEKK, 6000 series
+        grade: Kepstan 6002
+        tg: "158"
+        tm: "Lowest of the Kepstan range"
+        density: "1.27 (amorphous)"
+        other: "Pseudo-amorphous: amorphous or semi-crystalline depending on processing"
+        source: {title: "Arkema Kepstan 6002 TDS", url: "https://hpp.arkema.com/assets/arkema/TDS_KEPSTAN%C2%AE%206002_en_WW.pdf"}
+      - polymer: LMPAEK
+        grade: VICTREX LMPAEK 101 GRA
+        tg: "153 (midpoint)"
+        tm: "305"
+        density: "1.25"
+        other: "PEEK-based copolymer in the PAEK family"
+        source: {title: "Victrex LMPAEK 101 GRA datasheet", url: "https://www.victrex.com/en/downloads/datasheets/victrex-lmpaek-polymer-101-gra"}
+      - polymer: PAEK
+        grade: AvaSpire AV-651
+        tg: "158"
+        tm: "345"
+        density: "1.29"
+        other: "HDT 190 °C (1.8 MPa, annealed)"
+        source: {title: "AvaSpire AV-651 datasheet (Drake Plastics)", url: "https://drakeplastics.com/wp-content/uploads/2025/05/AvaSpire-AV-651.pdf"}
+
+  - id: imidized
+    name: Imidized Polymers
+    intro: >-
+      Polymers built on imide or related heterocyclic rings. PEI and TPI are
+      melt-processable; thermoset polyimide (Vespel) and PBI are not. PAI is melt-processable
+      before post-cure and effectively not after it, which decides its recycling route.
+    rows:
+      - polymer: PEI
+        grade: ULTEM 1000
+        tg: "217"
+        tm: "Amorphous"
+        density: "1.27"
+        other: "Tensile strength (yield) 110 MPa; tensile modulus 3.58 GPa; HDT 201 °C (1.82 MPa); UL94 V-0 at ≥0.75 mm; oxygen index 47%"
+        source: {title: "ULTEM 1000 technical datasheet", url: "https://Protolabs.com/media/1020056/ultem-resin_1000_americas_technical_data_sheet.pdf"}
+      - polymer: TPI (thermoplastic polyimide)
+        grade: AURUM (Mitsui Chemicals)
+        tg: "250"
+        tm: "388 (JCN3030 grade, DSC)"
+        density: ""
+        other: "Mitsui states the material is usable up to 240 °C"
+        source: {title: "Mitsui Chemicals AURUM page", url: "https://eu.mitsuichemicals.com/service/product/aurum.htm"}
+      - polymer: Thermoset polyimide
+        grade: DuPont Vespel SP-1
+        tg: ""
+        tm: "Does not melt"
+        density: ""
+        other: "Tensile strength 86.2 MPa at 23 °C; long-term performance up to 260 °C. Grades: SP-1 unfilled; SP-21 15% graphite; SP-22 40% graphite; SP-211 15% graphite + 10% PTFE"
+        source: {title: "DuPont Vespel SP datasheet (Curbell)", url: "https://www.curbellplastics.com/wp-content/uploads/2024/09/Curbell-Plastics-DuPont-Vespel-SP-Data-Sheet.pdf"}
+      - polymer: PAI
+        grade: Torlon 4203 / 4203L (extruded shapes)
+        tg: "275"
+        tm: "Amorphous"
+        density: "1.41"
+        other: "Tensile strength 165 MPa; tensile modulus 4.1 GPa. Grades: 4203L unfilled; 5030 30% glass fiber; 7130 30% carbon fiber; 4301 12% graphite + 3% PTFE"
+        source: {title: "Torlon 4203/4203L datasheet and Torlon PAI Design Guide (Drake Plastics)", url: "https://cn.drakeplastics.com/wp-content/uploads/2025/07/Torlon-4203_4203L-PAI_5.13.25-Datasheet.pdf"}
+      - polymer: PBI
+        grade: Celazole U-60SD
+        tg: "427 (DMA)"
+        tm: "Does not melt"
+        density: "1.3"
+        other: "Tensile strength 160 MPa; compressive strength 390 MPa (yield); flexural modulus 6.5 GPa; HDT 435 °C (1.8 MPa); limiting oxygen index 58%"
+        source: {title: "Celazole U-60SD typical properties (PBI Performance Products)", url: "https://pbipolymer.com/wp-content/uploads/2019/04/CELAZOLE-U-60SD-Typical-Properties.pdf"}
+
+  - id: sulfones
+    name: Sulfone Polymers
+    intro: >-
+      Amorphous, transparent-amber polymers with hydrolytic stability. PSU, PESU and PPSU
+      look alike as scrap; glass transition temperature and density separate them.
+    rows:
+      - polymer: PSU
+        grade: Udel P-1700
+        tg: "185"
+        tm: "Amorphous"
+        density: "1.24"
+        other: "Tensile strength 70.3 MPa; tensile modulus 2.48 GPa; HDT 174 °C (1.8 MPa). Tg per Udel PSU Design Guide (DSC onset)"
+        source: {title: "Udel P-1700 datasheet", url: "https://protolabs.com/media/b2rj51rq/udel-p1700.pdf"}
+        source2: {title: "Udel PSU Design Guide", url: "https://www.solvay.com/sites/g/files/srpend221/files/2018-08/Udel-PSU-Design-Guide_EN-v5.0_0_0.pdf"}
+      - polymer: PESU
+        grade: Veradel 3200P
+        tg: "220"
+        tm: "Amorphous"
+        density: "1.37"
+        other: ""
+        source: {title: "Veradel 3200P data (Plabase)", url: "https://en.plabase.com/plastic/items/5bc6ebe955e907411376d06d"}
+      - polymer: PPSU
+        grade: Radel R-5000
+        tg: "220"
+        tm: "Amorphous"
+        density: "1.29"
+        other: "Tensile strength 69.6 MPa; tensile modulus 2.34 GPa; HDT 207 °C (1.8 MPa)"
+        source: {title: "Radel R-5000 datasheet", url: "https://protolabs.com/media/gt1bplki/radel-r-5000.pdf"}
+
+  - id: others
+    name: PPS, LCP, PPA and PK
+    intro: >-
+      Semi-crystalline engineering and high-performance polymers that are melt-recycled.
+    rows:
+      - polymer: PPS
+        grade: Ryton PPS (Syensqo)
+        tg: "90"
+        tm: "280"
+        density: "1.34"
+        other: ""
+        source: {title: "Ryton PPS datasheet", url: "https://lesker.com/resin-additive-solutions/pdf/Ryton_M2000_FP_Data_Sheet.pdf"}
+      - polymer: LCP
+        grade: Vectra A950
+        tg: ""
+        tm: ""
+        density: "1.40"
+        other: "HDT 180 °C (1.8 MPa); UL RTI 240 °C electrical / 220 °C mechanical"
+        source: {title: "Vectra A950 product data (Goodfellow, Resinex)", url: "https://www.goodfellow.com/eu/vectra-a950-lcp-rod-group"}
+      - polymer: PPA, 33% glass fiber
+        grade: Amodel AE-4133 (dry)
+        tg: "95"
+        tm: "327"
+        density: "1.45"
+        other: ""
+        source: {title: "Amodel AE-4133 data (Plabase)", url: "https://en.plabase.com/plastic/items/5bc0854ddfbfc91289228944"}
+      - polymer: PK (aliphatic polyketone)
+        grade: POKETONE M330F
+        tg: ""
+        tm: "222"
+        density: "1.24"
+        other: "Moisture absorption 0.5% at 50% RH, 2.1% at saturation"
+        source: {title: "Hyosung POKETONE M330F TDS", url: "https://www.hyosungchemical.com/resources/front/files/pok_tds/M330F_TDS.pdf"}
+
+  - id: fluoro
+    name: Fluoropolymers
+    intro: >-
+      PTFE is not melt-processable and is recovered as micropowder. PFA, FEP, ETFE, ECTFE,
+      PVDF and PCTFE melt and can be reprocessed when kept segregated.
+    rows:
+      - polymer: PTFE
+        grade: PTFE (Plastics International datasheet)
+        tg: ""
+        tm: "327"
+        density: "2.13–2.22"
+        other: "Upper service temperature 260 °C (500 °F); limiting oxygen index above 95%"
+        source: {title: "PTFE datasheet (Plastics International)", url: "https://www.plasticsintl.com/media/trshlm53/ptfe-data-sheet.pdf"}
+      - polymer: PFA
+        grade: Teflon PFA 440 HP
+        tg: ""
+        tm: "302–310"
+        density: "2.12–2.17"
+        other: "Upper service temperature 260 °C"
+        source: {title: "Teflon PFA 440 HP product data", url: "https://www-eng.lbl.gov/~shuman/NEXT/MATERIALS&COMPONENTS/HV/PFA_440.pdf"}
+      - polymer: FEP
+        grade: FEP (TFE/HFP copolymer)
+        tg: ""
+        tm: "260"
+        density: ""
+        other: ""
+        source: {title: "Fluorinated ethylene propylene (Wikipedia)", url: "https://en.wikipedia.org/wiki/Teflon_FEP"}
+      - polymer: ETFE
+        grade: Tefzel ETFE 200
+        tg: ""
+        tm: "255–280"
+        density: "1.7"
+        other: "Recommended upper service temperature 150 °C"
+        source: {title: "Tefzel ETFE 200 product information", url: "https://www.pexco.com/wp-content/uploads/2025/09/Tefzel_ETFE_200_ProductInfo.pdf"}
+      - polymer: ECTFE
+        grade: Halar ECTFE
+        tg: ""
+        tm: "238"
+        density: "1.68"
+        other: "Used in many applications up to 149 °C"
+        source: {title: "Halar ECTFE datasheet", url: "https://wkfluidhandling.com/wp-content/media/materials/ectfe-halar.pdf"}
+      - polymer: PVDF
+        grade: Kynar 740
+        tg: "−40"
+        tm: "168"
+        density: "1.77–1.79"
+        other: ""
+        source: {title: "Arkema Kynar 740 TDS", url: "https://hpp.arkema.com/assets/arkema/TDS_KYNAR%C2%AE%20740%20RED_en_WW.pdf"}
+      - polymer: PCTFE
+        grade: NEOFLON PCTFE M-300H
+        tg: ""
+        tm: "212"
+        density: "2.13"
+        other: ""
+        source: {title: "Daikin NEOFLON PCTFE M-300H TDS", url: "https://www.daikinchemicals.com/library/pb_common/pdf/tds/Fluoropolymers/NEOFLON_PCTFE/tds-m-300h-E_ver01_Mar_2018.pdf"}
+
+fibers:
+  - fiber: PAN-based carbon fiber
+    data: "TORAYCA T700S: tensile strength 4,900 MPa; tensile modulus 230 GPa; density 1.80 g/cm³; filament 7 µm. Its standard sizings (50C, 60E, F0E) are listed for epoxy, phenolic, polyester and vinyl ester matrices"
+    source: {title: "TORAYCA T700S datasheet", url: "https://www.toraycma.com/wp-content/uploads/T700S-Data-Sheet.pdf"}
+  - fiber: PBI fiber
+    data: "Limiting oxygen index above 41%; specific gravity 1.4"
+    source: {title: "PBI fiber TDS (Minifibers)", url: "https://www.minifibers.com/files/TD/TDS_PBI-Fibers.pdf"}
+  - fiber: Novoloid (phenolic) fiber
+    data: "Specific gravity 1.27; does not melt; low smoke and combustion toxicity; can be used as a carbon fiber precursor"
+    source: {title: "Novoloid fiber datasheet (Avient)", url: "https://transportationblog.polyone.com/sites/default/files/2021-06/fl.a4.datasheet-novoloid.pdf"}
+  - fiber: Oxidized PAN (OPAN, preox)
+    data: "Commercial brands include PANOX (SGL Carbon), ZOLTEK OX (Zoltek) and PYROMEX (Teijin Carbon)"
+    source: {title: "OPAN fiber technical information (Textile Technologies)", url: "https://www.textiletechnologies.co.uk/pages/opan-fibre-technical-information"}
