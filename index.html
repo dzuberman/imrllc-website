@@ -98,19 +98,14 @@
   ],
   "founder": {
     "@type": "Organization",
-    "name": "Global Consulting & Manufacturing Group S.L. (GCMG)"
+    "name": "Global Consulting & Manufacturing Group (GCMG)"
   },
   "parentOrganization": {
     "@type": "Organization",
     "@id": "https://gcmg.eu/#organization",
-    "name": "Global Consulting & Manufacturing Group S.L.",
+    "name": "Global Consulting & Manufacturing Group",
     "alternateName": "GCMG",
-    "url": "https://gcmg.eu/",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "AD",
-      "addressLocality": "Andorra"
-    }
+    "url": "https://gcmg.eu/"
   },
   "address": [
     {
@@ -363,7 +358,15 @@
       "name": "Does IRM ship polymer scrap and finished compounds internationally?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. IRM operates a global supply network with documented chain of custody across the United States (South Jordan UT, Sumter SC), European Union (Croatia), India (Rajkot, Kandla FZE), and commercial offices in Brazil, China, Japan, and South Korea. Cross-border scrap shipments are handled under EU Waste Shipment Regulation (Annex III for non-hazardous post-industrial polymer scrap) and Basel Convention compliance where applicable. Standard incoterms include EXW, FCA, FOB, and DDP depending on customer preference."
+        "text": "Yes. IRM operates a global supply network with documented chain of custody across the United States (South Jordan UT, Sumter SC), European Union (Croatia), India (Rajkot, Kandla FZE), and commercial offices in Brazil, China, Japan, and South Korea. Cross-border scrap shipments are handled under the EU Waste Shipment Regulation and, where applicable, the Basel Convention. Standard incoterms include EXW, FCA, FOB, and DDP depending on customer preference."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should scrap be prepared for shipment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Keep each polymer and grade in its own container, for example unfilled PEEK apart from glass- or carbon-filled PEEK; mixed or unidentified material has to be sorted and tested before it can be reprocessed, which lowers its value. Remove metal inserts, labels and other plastics where practical, drain coolant and oil from machining swarf, and tell us about any contamination that cannot be removed. Pack in sealed bags on pallets, octabins or gaylords, each labelled with polymer, grade if known, form and approximate weight. Before shipping, send IRM photos, quantity, location and the grade name or datasheet so the lot can be quoted and collection arranged; for cross-border lots IRM prepares the waste classification and customs documentation."
       }
     }
   ]
@@ -3436,11 +3439,14 @@ body.cjk-active {
 
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
-          <span data-i18n="faq.q8">How does cross-border scrap shipping work?</span>
+          <span data-i18n="faq.q8">How should scrap be prepared for shipment?</span>
           <span class="faq-arrow">+</span>
         </button>
         <div class="faq-a" data-i18n-html="faq.a8">
-          <p>UHPP scrap moves under EWC (European Waste Catalogue) and WSR (Waste Shipment Regulation) classifications. Most thermoplastic UHPP scrap qualifies under EWC 07 02 13 / WSR Annex III B3011 — green-list, non-notified shipments between OECD countries.</p>
+          <p><strong>Keep streams separate.</strong> One polymer and grade per container — for example, unfilled PEEK kept apart from glass- or carbon-filled PEEK. Mixed or unidentified material has to be sorted and tested before it can be reprocessed, which lowers its value.</p>
+          <p><strong>Keep it clean and dry.</strong> Remove metal inserts, labels and other plastics where practical, and drain coolant and oil from machining swarf. Tell us about any contamination that cannot be removed.</p>
+          <p><strong>Pack and label each container.</strong> Sealed bags on pallets, octabins or gaylords, each labelled with polymer, grade if known, form (parts, runners, swarf, film) and approximate weight.</p>
+          <p><a href="#contact" style="color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);">Contact us</a> before shipping with photos, quantity, location and the grade name or datasheet, so we can quote the lot and arrange collection. For cross-border lots we prepare the waste classification and customs documentation.</p>
         </div>
       </div>
 
@@ -3586,7 +3592,7 @@ body.cjk-active {
     <div class="footer-reg" style="font-size:9px;color:var(--text-muted);line-height:1.6;margin-top:4px;max-width:860px;">
       All brand names and trademarks are the property of their respective owners. IRM LLC and GCMG S.L. are not affiliated with, endorsed by, or authorised distributors of any supplier mentioned on this site. Product grades and tradenames are referenced for informational purposes only under nominative fair use.
     </div>
-    <div class="footer-reg" data-i18n="footer.reg">Operating under GCMG · Global Consulting & Manufacturing Group S.L. · Andorra</div>
+    <div class="footer-reg" data-i18n="footer.reg">Operating under GCMG · Global Consulting & Manufacturing Group</div>
   </div>
 </footer>
 
@@ -4124,8 +4130,8 @@ const T = {
   "faq.a6": "<p>Every shipment includes: <strong>Certificate of Analysis (CoA)</strong> — DSC results (Tg, Tm, crystallinity), MFI, density, ash content, lot traceability. <strong>Material Analysis Record</strong> — for higher-tier materials, full physics-validated report. <strong>Safety Data Sheet (SDS)</strong>, customs codes, EWC/WSR codes, and chain-of-custody documentation. AS9100/ITAR-compatible documentation available where required.</p>",
   "faq.q7": "Do you accept small scrap quantities?",
   "faq.a7": "<p>Yes — minimum economically viable lot size depends on the polymer. PEEK, PEKK, and other high-value PAEKs: down to 50–100 kg per lot. Polyimides and fluoropolymers: typically 100–200 kg minimum. Lower-value HT-polyamides and polysulfones: 500 kg or more, depending on geography.</p><p>If you have a small but recurring stream, we can structure a regular collection arrangement. <a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">Contact us</a> with details.</p>",
-  "faq.q8": "How does cross-border scrap shipping work?",
-  "faq.a8": "<p>UHPP scrap moves under EWC (European Waste Catalogue) and WSR (Waste Shipment Regulation) classifications. Most thermoplastic UHPP scrap qualifies under EWC 07 02 13 / WSR Annex III B3011 — green-list, non-notified shipments between OECD countries.</p>",
+  "faq.q8": "How should scrap be prepared for shipment?",
+  "faq.a8": "<p><strong>Keep streams separate.</strong> One polymer and grade per container — for example, unfilled PEEK kept apart from glass- or carbon-filled PEEK. Mixed or unidentified material has to be sorted and tested before it can be reprocessed, which lowers its value.</p><p><strong>Keep it clean and dry.</strong> Remove metal inserts, labels and other plastics where practical, and drain coolant and oil from machining swarf. Tell us about any contamination that cannot be removed.</p><p><strong>Pack and label each container.</strong> Sealed bags on pallets, octabins or gaylords, each labelled with polymer, grade if known, form (parts, runners, swarf, film) and approximate weight.</p><p><a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">Contact us</a> before shipping with photos, quantity, location and the grade name or datasheet, so we can quote the lot and arrange collection. For cross-border lots we prepare the waste classification and customs documentation.</p>",
   "contact.label": "Get in Touch",
   "contact.title": "Start a conversation",
   "contact.h3": "We source, compound, and supply what others can't",
@@ -4143,7 +4149,7 @@ const T = {
   "form.message": "Message *",
   "form.submit": "Send Inquiry",
   "footer.rights": "© 2026 International Resources Manufacturing LLC. All rights reserved.",
-  "footer.reg": "Operating under GCMG · Global Consulting & Manufacturing Group S.L. · Andorra"
+  "footer.reg": "Operating under GCMG · Global Consulting & Manufacturing Group"
 },
   de: {
   "nav.about": "Über uns",
@@ -4250,8 +4256,8 @@ const T = {
   "faq.a6": "<p>Jede Sendung beinhaltet: <strong>Analysenzertifikat (CoA)</strong> — DSC-Ergebnisse (Tg, Tm, Kristallinität), MFI, Dichte, Aschegehalt, Chargenrückverfolgbarkeit. <strong>Materialanalyseprotokoll</strong> — für höherwertige Materialien, vollständiger physikalisch validierter Bericht. <strong>Sicherheitsdatenblatt (SDS)</strong>, Zollcodes, EWC/WSR-Codes und Lieferkettendokumentation. AS9100/ITAR-kompatible Dokumentation auf Anforderung.</p>",
   "faq.q7": "Akzeptieren Sie kleine Schrottmengen?",
   "faq.a7": "<p>Ja — die wirtschaftlich tragfähige Mindestlosgröße hängt vom Polymer ab. PEEK, PEKK und andere hochwertige PAEKs: bis zu 50–100 kg pro Charge. Polyimide und Fluorpolymere: typischerweise 100–200 kg Minimum. HT-Polyamide und Polysulfone niedrigeren Wertes: 500 kg oder mehr, geographieabhängig.</p><p>Für kleine, aber wiederkehrende Ströme können wir eine regelmäßige Sammelvereinbarung strukturieren, die im Zeitverlauf aggregiert. <a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">Kontaktieren Sie uns</a> mit Details und wir prüfen.</p>",
-  "faq.q8": "Wie funktioniert grenzüberschreitender Schrottversand?",
-  "faq.a8": "<p>UHPP-Schrott bewegt sich unter EWC- (Europäisches Abfallverzeichnis) und WSR- (Abfallverbringungsverordnung) -Klassifizierungen. Der meiste thermoplastische UHPP-Schrott qualifiziert sich unter EWC 07 02 13 / WSR Anhang III B3011 — Grünlistenversand, nicht-notifiziert zwischen OECD-Ländern.</p>",
+  "faq.q8": "Wie sollte Schrott für den Versand vorbereitet werden?",
+  "faq.a8": "<p><strong>Ströme getrennt halten.</strong> Ein Polymer und eine Type pro Behälter — zum Beispiel ungefülltes PEEK getrennt von glas- oder kohlenstofffasergefülltem PEEK. Gemischtes oder nicht identifiziertes Material muss vor der Wiederverarbeitung sortiert und geprüft werden, was seinen Wert mindert.</p><p><strong>Sauber und trocken halten.</strong> Metalleinlegeteile, Etiketten und Fremdkunststoffe nach Möglichkeit entfernen und Kühlschmierstoff und Öl von Zerspanungsspänen abtropfen lassen. Informieren Sie uns über Verunreinigungen, die sich nicht entfernen lassen.</p><p><strong>Jeden Behälter verpacken und kennzeichnen.</strong> Verschlossene Säcke auf Paletten, Octabins oder Gaylords, jeweils gekennzeichnet mit Polymer, Type (falls bekannt), Form (Teile, Angüsse, Späne, Folie) und ungefährem Gewicht.</p><p><a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">Kontaktieren Sie uns</a> vor dem Versand mit Fotos, Menge, Standort sowie Typenbezeichnung oder Datenblatt, damit wir ein Angebot für die Partie erstellen und die Abholung organisieren können. Für grenzüberschreitende Partien erstellen wir die abfallrechtliche Einstufung und die Zollunterlagen.</p>",
   "contact.label": "Kontakt",
   "contact.title": "Gespräch beginnen",
   "contact.h3": "Wir beschaffen, compoundieren und liefern, was andere nicht können",
@@ -4269,7 +4275,7 @@ const T = {
   "form.message": "Nachricht *",
   "form.submit": "Anfrage senden",
   "footer.rights": "© 2026 International Resources Manufacturing LLC. Alle Rechte vorbehalten.",
-  "footer.reg": "Betrieben unter GCMG · Global Consulting & Manufacturing Group S.L. · Andorra"
+  "footer.reg": "Betrieben unter GCMG · Global Consulting & Manufacturing Group"
 },
   fr: {
   "nav.about": "À propos",
@@ -4376,8 +4382,8 @@ const T = {
   "faq.a6": "<p>Chaque expédition inclut : <strong>Certificat d'analyse (CoA)</strong> — résultats DSC (Tg, Tm, cristallinité), IF, densité, taux de cendres, traçabilité de lot. <strong>Rapport d'analyse de matériau</strong> — pour matériaux de niveau supérieur, rapport complet validé physiquement. <strong>Fiche de données de sécurité (FDS)</strong>, codes douaniers, codes EWC/WSR et documentation de chaîne de traçabilité. Documentation compatible AS9100/ITAR sur demande.</p>",
   "faq.q7": "Acceptez-vous de petites quantités de chutes ?",
   "faq.a7": "<p>Oui — la taille minimale économiquement viable dépend du polymère. PEEK, PEKK et autres PAEKs de haute valeur : jusqu'à 50–100 kg par lot. Polyimides et fluoropolymères : typiquement 100–200 kg minimum. Polyamides HT et polysulfones de moindre valeur : 500 kg ou plus, selon la géographie.</p><p>Si vous avez un flux petit mais récurrent, nous pouvons structurer un arrangement de collecte régulier qui agrège dans le temps. <a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">Contactez-nous</a> avec les détails.</p>",
-  "faq.q8": "Comment fonctionne l'expédition transfrontalière de chutes ?",
-  "faq.a8": "<p>Les chutes UHPP se déplacent sous classifications EWC (Catalogue européen des déchets) et WSR (Règlement sur les transferts de déchets). La plupart des chutes UHPP thermoplastiques se qualifient sous EWC 07 02 13 / WSR Annexe III B3011 — liste verte, expéditions non-notifiées entre pays OCDE.</p>",
+  "faq.q8": "Comment préparer les chutes avant l'expédition ?",
+  "faq.a8": "<p><strong>Séparez les flux.</strong> Un polymère et un grade par contenant — par exemple, le PEEK non chargé séparé du PEEK chargé verre ou carbone. Une matière mélangée ou non identifiée doit être triée et analysée avant de pouvoir être retraitée, ce qui réduit sa valeur.</p><p><strong>Gardez-les propres et secs.</strong> Retirez dans la mesure du possible les inserts métalliques, les étiquettes et les autres plastiques, et égouttez le liquide de coupe et l'huile des copeaux d'usinage. Signalez-nous toute contamination impossible à retirer.</p><p><strong>Emballez et étiquetez chaque contenant.</strong> Sacs fermés sur palettes, octabins ou big bags, chacun étiqueté avec le polymère, le grade s'il est connu, la forme (pièces, carottes, copeaux, film) et le poids approximatif.</p><p><a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">Contactez-nous</a> avant l'expédition avec des photos, la quantité, la localisation et le nom du grade ou la fiche technique, afin que nous puissions établir une offre pour le lot et organiser l'enlèvement. Pour les lots transfrontaliers, nous préparons la classification des déchets et les documents douaniers.</p>",
   "contact.label": "Nous contacter",
   "contact.title": "Démarrer une conversation",
   "contact.h3": "Nous sourçons, compoundons et fournissons ce que d'autres ne peuvent pas",
@@ -4395,7 +4401,7 @@ const T = {
   "form.message": "Message *",
   "form.submit": "Envoyer la demande",
   "footer.rights": "© 2026 International Resources Manufacturing LLC. Tous droits réservés.",
-  "footer.reg": "Opérant sous GCMG · Global Consulting & Manufacturing Group S.L. · Andorre"
+  "footer.reg": "Opérant sous GCMG · Global Consulting & Manufacturing Group"
 },
   it: {
   "nav.about": "Chi siamo",
@@ -4502,8 +4508,8 @@ const T = {
   "faq.a6": "<p>Ogni spedizione include: <strong>Certificato di analisi (CoA)</strong> — risultati DSC (Tg, Tm, cristallinità), MFI, densità, contenuto di ceneri, tracciabilità del lotto. <strong>Registro di analisi materiale</strong> — per materiali di livello superiore, rapporto completo validato fisicamente. <strong>Scheda di sicurezza (SDS)</strong>, codici doganali, codici EWC/WSR e documentazione di catena di custodia. Documentazione compatibile AS9100/ITAR su richiesta.</p>",
   "faq.q7": "Accettate piccole quantità di scarti?",
   "faq.a7": "<p>Sì — la dimensione minima economicamente sostenibile dipende dal polimero. PEEK, PEKK e altri PAEK di alto valore: fino a 50–100 kg per lotto. Poliimmidi e fluoropolimeri: tipicamente 100–200 kg minimo. Poliammidi HT e polisolfoni di valore inferiore: 500 kg o più, in base alla geografia.</p><p>Per flussi piccoli ma ricorrenti, possiamo strutturare un accordo di raccolta regolare che aggrega nel tempo. <a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">Contattateci</a> con i dettagli.</p>",
-  "faq.q8": "Come funziona la spedizione transfrontaliera di scarti?",
-  "faq.a8": "<p>Gli scarti UHPP si muovono sotto classificazioni EWC (Catalogo europeo dei rifiuti) e WSR (Regolamento sulle spedizioni di rifiuti). La maggior parte degli scarti UHPP termoplastici si qualifica sotto EWC 07 02 13 / WSR Allegato III B3011 — lista verde, spedizioni non notificate tra paesi OCSE.</p>",
+  "faq.q8": "Come preparare gli scarti per la spedizione?",
+  "faq.a8": "<p><strong>Tenete separati i flussi.</strong> Un polimero e un grado per contenitore — ad esempio PEEK non caricato separato dal PEEK caricato vetro o carbonio. Il materiale misto o non identificato deve essere selezionato e analizzato prima di poter essere rilavorato, e questo ne riduce il valore.</p><p><strong>Puliti e asciutti.</strong> Rimuovete per quanto possibile inserti metallici, etichette e altre plastiche, e fate sgocciolare refrigerante e olio dai trucioli di lavorazione. Segnalateci qualsiasi contaminazione che non può essere rimossa.</p><p><strong>Imballate ed etichettate ogni contenitore.</strong> Sacchi chiusi su pallet, octabin o big bag, ciascuno etichettato con polimero, grado se noto, forma (pezzi, materozze, trucioli, film) e peso approssimativo.</p><p><a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">Contattateci</a> prima della spedizione con foto, quantità, ubicazione e nome del grado o scheda tecnica, così potremo quotare il lotto e organizzare il ritiro. Per i lotti transfrontalieri prepariamo la classificazione dei rifiuti e la documentazione doganale.</p>",
   "contact.label": "Contattaci",
   "contact.title": "Inizia una conversazione",
   "contact.h3": "Sourcing, compoundatura e fornitura di ciò che altri non possono",
@@ -4521,7 +4527,7 @@ const T = {
   "form.message": "Messaggio *",
   "form.submit": "Invia richiesta",
   "footer.rights": "© 2026 International Resources Manufacturing LLC. Tutti i diritti riservati.",
-  "footer.reg": "Operante sotto GCMG · Global Consulting & Manufacturing Group S.L. · Andorra"
+  "footer.reg": "Operante sotto GCMG · Global Consulting & Manufacturing Group"
 },
   es: {
   "nav.about": "Acerca de",
@@ -4628,8 +4634,8 @@ const T = {
   "faq.a6": "<p>Cada envío incluye: <strong>Certificado de análisis (CoA)</strong> — resultados DSC (Tg, Tm, cristalinidad), IFM, densidad, contenido de cenizas, trazabilidad de lote. <strong>Registro de análisis de material</strong> — para materiales de nivel superior, informe completo validado físicamente. <strong>Hoja de seguridad (SDS)</strong>, códigos aduaneros, códigos EWC/WSR y documentación de cadena de custodia. Documentación compatible AS9100/ITAR a solicitud.</p>",
   "faq.q7": "¿Aceptan pequeñas cantidades de desechos?",
   "faq.a7": "<p>Sí — el tamaño mínimo económicamente viable depende del polímero. PEEK, PEKK y otros PAEK de alto valor: hasta 50–100 kg por lote. Poliimidas y fluoropolímeros: típicamente 100–200 kg mínimo. Poliamidas HT y polisulfonas de menor valor: 500 kg o más, según geografía.</p><p>Si tiene un flujo pequeño pero recurrente, podemos estructurar un acuerdo de recolección regular que agregue con el tiempo. <a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">Contáctenos</a> con detalles.</p>",
-  "faq.q8": "¿Cómo funciona el envío transfronterizo de desechos?",
-  "faq.a8": "<p>Los desechos UHPP se mueven bajo clasificaciones EWC (Catálogo Europeo de Residuos) y WSR (Reglamento de Traslados de Residuos). La mayoría de los desechos UHPP termoplásticos califican bajo EWC 07 02 13 / WSR Anexo III B3011 — lista verde, envíos no notificados entre países OCDE.</p>",
+  "faq.q8": "¿Cómo se deben preparar los desechos para el envío?",
+  "faq.a8": "<p><strong>Mantenga los flujos separados.</strong> Un polímero y un grado por contenedor — por ejemplo, PEEK sin carga separado del PEEK cargado con vidrio o carbono. El material mezclado o sin identificar debe clasificarse y analizarse antes de poder reprocesarse, lo que reduce su valor.</p><p><strong>Manténgalo limpio y seco.</strong> Retire, en la medida de lo posible, insertos metálicos, etiquetas y otros plásticos, y escurra el refrigerante y el aceite de las virutas de mecanizado. Infórmenos de cualquier contaminación que no se pueda eliminar.</p><p><strong>Embale y etiquete cada contenedor.</strong> Bolsas cerradas sobre palés, octabins o big bags, cada uno etiquetado con el polímero, el grado si se conoce, la forma (piezas, coladas, virutas, film) y el peso aproximado.</p><p><a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">Contáctenos</a> antes del envío con fotos, cantidad, ubicación y el nombre del grado o la ficha técnica, para que podamos cotizar el lote y organizar la recogida. Para lotes transfronterizos preparamos la clasificación de residuos y la documentación aduanera.</p>",
   "contact.label": "Contáctenos",
   "contact.title": "Iniciar una conversación",
   "contact.h3": "Abastecemos, compoundamos y suministramos lo que otros no pueden",
@@ -4647,7 +4653,7 @@ const T = {
   "form.message": "Mensaje *",
   "form.submit": "Enviar consulta",
   "footer.rights": "© 2026 International Resources Manufacturing LLC. Todos los derechos reservados.",
-  "footer.reg": "Operando bajo GCMG · Global Consulting & Manufacturing Group S.L. · Andorra"
+  "footer.reg": "Operando bajo GCMG · Global Consulting & Manufacturing Group"
 },
   pt: {
   "nav.about": "Sobre nós",
@@ -4754,8 +4760,8 @@ const T = {
   "faq.a6": "<p>Cada remessa inclui: <strong>Certificado de análise (CoA)</strong> — resultados DSC (Tg, Tm, cristalinidade), IFM, densidade, conteúdo de cinzas, rastreabilidade de lote. <strong>Registro de análise de material</strong> — para materiais de nível superior, relatório completo validado fisicamente. <strong>Ficha de segurança (SDS)</strong>, códigos aduaneiros, códigos EWC/WSR e documentação de cadeia de custódia. Documentação compatível AS9100/ITAR sob solicitação.</p>",
   "faq.q7": "Vocês aceitam pequenas quantidades de resíduos?",
   "faq.a7": "<p>Sim — o tamanho mínimo economicamente viável depende do polímero. PEEK, PEKK e outros PAEKs de alto valor: até 50–100 kg por lote. Poliimidas e fluoropolímeros: tipicamente 100–200 kg mínimo. Poliamidas HT e polissulfonas de menor valor: 500 kg ou mais, dependendo da geografia.</p><p>Se você tem um fluxo pequeno mas recorrente, podemos estruturar um arranjo regular de coleta que agrega ao longo do tempo. <a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">Entre em contato</a> com detalhes.</p>",
-  "faq.q8": "Como funciona o envio transfronteiriço de resíduos?",
-  "faq.a8": "<p>Os resíduos UHPP movem-se sob classificações EWC (Catálogo Europeu de Resíduos) e WSR (Regulamento de Transferência de Resíduos). A maior parte dos resíduos UHPP termoplásticos qualifica-se sob EWC 07 02 13 / WSR Anexo III B3011 — lista verde, remessas não-notificadas entre países OCDE.</p>",
+  "faq.q8": "Como preparar os resíduos para o envio?",
+  "faq.a8": "<p><strong>Mantenha os fluxos separados.</strong> Um polímero e um grau por contêiner — por exemplo, PEEK sem carga separado do PEEK com carga de vidro ou carbono. Material misturado ou não identificado precisa ser separado e analisado antes de ser reprocessado, o que reduz seu valor.</p><p><strong>Mantenha-o limpo e seco.</strong> Remova, sempre que possível, insertos metálicos, etiquetas e outros plásticos, e escorra o fluido de corte e o óleo dos cavacos de usinagem. Informe-nos sobre qualquer contaminação que não possa ser removida.</p><p><strong>Embale e etiquete cada contêiner.</strong> Sacos fechados sobre paletes, octabins ou big bags, cada um etiquetado com o polímero, o grau se conhecido, a forma (peças, canais de injeção, cavacos, filme) e o peso aproximado.</p><p><a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">Entre em contato</a> antes do envio com fotos, quantidade, localização e o nome do grau ou a ficha técnica, para que possamos cotar o lote e organizar a coleta. Para lotes internacionais, preparamos a classificação de resíduos e a documentação aduaneira.</p>",
   "contact.label": "Entre em contato",
   "contact.title": "Iniciar uma conversa",
   "contact.h3": "Fornecemos, compoundamos e suprimos o que outros não conseguem",
@@ -4773,7 +4779,7 @@ const T = {
   "form.message": "Mensagem *",
   "form.submit": "Enviar consulta",
   "footer.rights": "© 2026 International Resources Manufacturing LLC. Todos os direitos reservados.",
-  "footer.reg": "Operando sob GCMG · Global Consulting & Manufacturing Group S.L. · Andorra"
+  "footer.reg": "Operando sob GCMG · Global Consulting & Manufacturing Group"
 },
   zh: {
   "nav.about": "关于我们",
@@ -4880,8 +4886,8 @@ const T = {
   "faq.a6": "<p>每次发货包括:<strong>分析证书(CoA)</strong>——DSC结果(Tg、Tm、结晶度)、MFI、密度、灰分含量、批次可追溯性。<strong>材料分析记录</strong>——对于较高级别的材料,完整物理验证报告。<strong>安全数据表(SDS)</strong>、海关代码、EWC/WSR代码和监管链文档。根据要求提供AS9100/ITAR兼容文档。</p>",
   "faq.q7": "你们接受小批量废料吗?",
   "faq.a7": "<p>是的——经济上可行的最小批量取决于聚合物。PEEK、PEKK和其他高价值PAEK:每批低至50–100公斤。聚酰亚胺和含氟聚合物:通常最少100–200公斤。低价值高温聚酰胺和聚砜:500公斤或更多,根据地理位置。</p><p>如果您有小但经常性的料流,我们可以构建定期收集安排,随时间汇总。<a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">联系我们</a>提供详细信息。</p>",
-  "faq.q8": "跨境废料运输如何运作?",
-  "faq.a8": "<p>UHPP废料在EWC(欧洲废物目录)和WSR(废物运输条例)分类下流动。大多数热塑性UHPP废料符合EWC 07 02 13/WSR附件III B3011 — 绿色清单,在OECD国家之间未通报的运输。</p>",
+  "faq.q8": "废料在发运前应如何准备?",
+  "faq.a8": "<p><strong>分流存放。</strong>每个容器只装一种聚合物和一个牌号——例如,未填充PEEK与玻纤或碳纤填充PEEK分开存放。混合或无法识别的材料必须先分选和检测才能再加工,这会降低其价值。</p><p><strong>保持清洁干燥。</strong>尽可能去除金属嵌件、标签和其他塑料,并沥干机加工切屑上的切削液和油。如有无法去除的污染,请告知我们。</p><p><strong>逐个容器包装并贴标。</strong>使用密封袋,装于托盘、八角箱或吨袋中,每个容器标明聚合物、牌号(如已知)、形态(零件、流道料、切屑、薄膜)和大致重量。</p><p>发运前请<a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">联系我们</a>,提供照片、数量、所在地以及牌号名称或技术数据表,以便我们为该批次报价并安排提货。对于跨境批次,我们负责准备废物分类和海关文件。</p>",
   "contact.label": "联系我们",
   "contact.title": "开始对话",
   "contact.h3": "我们采购、复合并供应他人无法做到的",
@@ -4899,7 +4905,7 @@ const T = {
   "form.message": "留言 *",
   "form.submit": "发送询价",
   "footer.rights": "© 2026 International Resources Manufacturing LLC. 版权所有。",
-  "footer.reg": "隶属于GCMG · Global Consulting & Manufacturing Group S.L. · 安道尔"
+  "footer.reg": "隶属于GCMG · Global Consulting & Manufacturing Group"
 },
   ja: {
   "nav.about": "会社概要",
@@ -5006,8 +5012,8 @@ const T = {
   "faq.a6": "<p>各出荷には以下が含まれます：<strong>分析証明書（CoA）</strong> — DSC結果（Tg、Tm、結晶化度）、MFI、密度、灰分含有量、ロットトレーサビリティ。<strong>材料分析記録</strong> — 高層材料用、完全な物理的検証レポート。<strong>安全データシート（SDS）</strong>、税関コード、EWC/WSRコード、保管継続性文書。要求に応じてAS9100/ITAR互換文書を提供します。</p>",
   "faq.q7": "少量の廃材を受け付けますか？",
   "faq.a7": "<p>はい — 経済的に実行可能な最小ロットサイズはポリマーによって異なります。PEEK、PEKK、その他の高価値PAEK：ロットあたり50–100 kgまで。ポリイミドおよびフッ素ポリマー：通常100–200 kg最小。低価値HTポリアミドおよびポリスルホン：地理によって500 kg以上。</p><p>小さいが繰り返し発生するストリームがあれば、時間とともに集約する定期的な収集アレンジメントを構築できます。<a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">詳細についてお問い合わせください</a>。</p>",
-  "faq.q8": "国境を越える廃材出荷はどのように機能しますか？",
-  "faq.a8": "<p>UHPP廃材はEWC（欧州廃棄物カタログ）およびWSR（廃棄物輸送規則）分類の下で移動します。ほとんどの熱可塑性UHPP廃材はEWC 07 02 13/WSR附属書III B3011 — グリーンリスト、OECD国間の通知不要出荷の対象となります。</p>",
+  "faq.q8": "廃材は出荷前にどのように準備すればよいですか？",
+  "faq.a8": "<p><strong>ストリームを分けてください。</strong>1つの容器には1種類のポリマー・1グレードのみ — 例えば、無充填PEEKはガラス繊維・炭素繊維充填PEEKと分けて保管してください。混合または識別できない材料は、再加工の前に選別と試験が必要となり、価値が下がります。</p><p><strong>清潔で乾燥した状態に。</strong>可能な範囲で金属インサート、ラベル、他の樹脂を取り除き、切削くずからはクーラントや油を切ってください。除去できない汚れがある場合はお知らせください。</p><p><strong>容器ごとに梱包・表示。</strong>密封した袋をパレット、オクタビンまたはフレコンに入れ、それぞれにポリマー名、グレード（分かる場合）、形状（部品、ランナー、切削くず、フィルム）、おおよその重量を表示してください。</p><p>出荷前に、写真、数量、所在地、グレード名またはデータシートを添えて<a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">お問い合わせ</a>ください。ロットの見積もりと引き取りの手配を行います。国境を越えるロットについては、廃棄物分類と通関書類を当社で作成します。</p>",
   "contact.label": "お問い合わせ",
   "contact.title": "会話を始める",
   "contact.h3": "他者ができないものを調達、コンパウンド化、供給します",
@@ -5025,7 +5031,7 @@ const T = {
   "form.message": "メッセージ *",
   "form.submit": "問い合わせを送信",
   "footer.rights": "© 2026 International Resources Manufacturing LLC. 全著作権所有。",
-  "footer.reg": "GCMG · Global Consulting & Manufacturing Group S.L. · アンドラの下で運営"
+  "footer.reg": "GCMG · Global Consulting & Manufacturing Groupの下で運営"
 },
   ko: {
   "nav.about": "회사 소개",
@@ -5132,8 +5138,8 @@ const T = {
   "faq.a6": "<p>모든 출하에 포함: <strong>분석 성적서(CoA)</strong> — DSC 결과(Tg, Tm, 결정화도), MFI, 밀도, 회분 함량, 로트 추적성. <strong>소재 분석 기록</strong> — 고급 소재용, 완전한 물리적 검증 보고서. <strong>안전 데이터 시트(SDS)</strong>, 세관 코드, EWC/WSR 코드, 보관 연속성 문서. 필요 시 AS9100/ITAR 호환 문서 제공.</p>",
   "faq.q7": "소량 스크랩을 수락합니까?",
   "faq.a7": "<p>예 — 경제적으로 실행 가능한 최소 로트 크기는 폴리머에 따라 다릅니다. PEEK, PEKK 및 기타 고가 PAEK: 로트당 50–100 kg까지. 폴리이미드 및 불소 폴리머: 일반적으로 최소 100–200 kg. 저가 HT 폴리아미드 및 폴리설폰: 지역에 따라 500 kg 이상.</p><p>소규모지만 반복적인 스트림이 있다면 시간이 지남에 따라 집계하는 정기 수집 약정을 구성할 수 있습니다. <a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">세부 정보를 알려주세요</a>.</p>",
-  "faq.q8": "국경 간 스크랩 운송은 어떻게 작동합니까?",
-  "faq.a8": "<p>UHPP 스크랩은 EWC(유럽 폐기물 목록) 및 WSR(폐기물 운송 규정) 분류에 따라 이동합니다. 대부분의 열가소성 UHPP 스크랩은 EWC 07 02 13 / WSR 부속서 III B3011 — OECD 국가 간 녹색 목록, 미신고 운송으로 자격을 갖춥니다.</p>",
+  "faq.q8": "스크랩은 운송 전에 어떻게 준비해야 합니까?",
+  "faq.a8": "<p><strong>스트림을 분리하십시오.</strong> 용기 하나에 폴리머 한 종류, 그레이드 하나만 담으십시오. 예를 들어 무충전 PEEK는 유리섬유 또는 탄소섬유 충전 PEEK와 분리해 보관합니다. 혼합되었거나 식별되지 않은 재료는 재가공 전에 선별과 시험이 필요하므로 가치가 낮아집니다.</p><p><strong>깨끗하고 건조하게 유지하십시오.</strong> 가능한 한 금속 인서트, 라벨, 다른 플라스틱을 제거하고 가공 칩에서 절삭유와 오일을 빼 주십시오. 제거할 수 없는 오염이 있으면 알려 주십시오.</p><p><strong>용기별로 포장하고 표시하십시오.</strong> 밀봉한 봉투를 팔레트, 옥타빈 또는 톤백에 담고, 각각 폴리머, 그레이드(알고 있는 경우), 형태(부품, 런너, 칩, 필름), 대략적인 중량을 표시하십시오.</p><p>운송 전에 사진, 수량, 위치, 그레이드명 또는 데이터시트와 함께 <a href=\"#contact\" style=\"color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);\">문의해 주십시오</a>. 로트 견적을 내고 수거를 준비해 드립니다. 국경 간 로트의 경우 폐기물 분류와 통관 서류를 당사가 준비합니다.</p>",
   "contact.label": "문의하기",
   "contact.title": "대화 시작하기",
   "contact.h3": "다른 곳에서 할 수 없는 소싱, 컴파운딩, 공급",
@@ -5151,7 +5157,7 @@ const T = {
   "form.message": "메시지 *",
   "form.submit": "문의 보내기",
   "footer.rights": "© 2026 International Resources Manufacturing LLC. 모든 권리 보유.",
-  "footer.reg": "GCMG · Global Consulting & Manufacturing Group S.L. · 안도라 하에 운영"
+  "footer.reg": "GCMG · Global Consulting & Manufacturing Group 하에 운영"
 },
 };
 
