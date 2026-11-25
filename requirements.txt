@@ -1,0 +1,2 @@
+# The single-page site has no Python dependencies.
+# Kept so the Cloudflare Pages build command (pip install -r requirements.txt && python build.py) succeeds.
